@@ -10,12 +10,12 @@ namespace CurseProject {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm4
+	/// Сводка для AdminForm2
 	/// </summary>
-	public ref class MyForm4 : public System::Windows::Forms::Form
+	public ref class AdminForm2 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm4(void)
+		AdminForm2(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace CurseProject {
 		/// <summary>
 		/// Освободить все используемые ресурсы.
 		/// </summary>
-		~MyForm4()
+		~AdminForm2()
 		{
 			if (components)
 			{
@@ -48,17 +48,11 @@ namespace CurseProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->SuspendLayout();
-			// 
-			// MyForm4
-			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->components = gcnew System::ComponentModel::Container();
+			this->Size = System::Drawing::Size(300,300);
+			this->Text = L"AdminForm2";
+			this->Padding = System::Windows::Forms::Padding(0);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(449, 406);
-			this->Name = L"MyForm4";
-			this->Text = L"MyForm4";
-			this->ResumeLayout(false);
-
 		}
 #pragma endregion
 	};

@@ -119,13 +119,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AdminForm1.cpp" />
+    <ClCompile Include="AdminForm2.cpp" />
+    <ClCompile Include="AdminForm3.cpp" />
+    <ClCompile Include="AdminForm4.cpp" />
+    <ClCompile Include="Classes.cpp" />
+    <ClCompile Include="EditForm.cpp" />
+    <ClCompile Include="Functions.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="AdminForm.cpp" />
-    <ClCompile Include="MyForm3.cpp" />
-    <ClCompile Include="MyForm4.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="AutorizationForm.cpp" />
+    <ClCompile Include="LibraryForm.cpp" />
+    <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdminForm1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AdminForm2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AdminForm3.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AdminForm4.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Classes.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="LoginForm.h">
@@ -134,26 +153,50 @@
     <ClInclude Include="AdminForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyForm3.h">
+    <ClInclude Include="AutorizationForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyForm4.h">
+    <ClInclude Include="LibraryForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Time.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminForm1.resx">
+      <DependentUpon>AdminForm1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm2.resx">
+      <DependentUpon>AdminForm2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm3.resx">
+      <DependentUpon>AdminForm3.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm4.resx">
+      <DependentUpon>AdminForm4.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyForm3.resx">
-      <DependentUpon>MyForm3.h</DependentUpon>
+    <EmbeddedResource Include="AutorizationForm.resx">
+      <DependentUpon>AutorizationForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyForm4.resx">
-      <DependentUpon>MyForm4.h</DependentUpon>
+    <EmbeddedResource Include="LibraryForm.resx">
+      <DependentUpon>LibraryForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Basket.txt" />
+    <Text Include="Data.txt" />
+    <Text Include="DefaultData.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

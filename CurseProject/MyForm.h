@@ -10,12 +10,12 @@ namespace CurseProject {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm3
+	/// Сводка для MyForm
 	/// </summary>
-	public ref class MyForm3 : public System::Windows::Forms::Form
+	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm3(void)
+		MyForm(void)
 		{
 			InitializeComponent();
 			//
@@ -27,13 +27,15 @@ namespace CurseProject {
 		/// <summary>
 		/// Освободить все используемые ресурсы.
 		/// </summary>
-		~MyForm3()
+		~MyForm()
 		{
 			if (components)
 			{
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Button^ button1;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,15 +50,28 @@ namespace CurseProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// MyForm3
+			// button1
+			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button1->Location = System::Drawing::Point(42, 41);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(245, 53);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"Вернуть книги";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(478, 429);
-			this->Name = L"MyForm3";
-			this->Text = L"MyForm3";
+			this->ClientSize = System::Drawing::Size(335, 115);
+			this->Controls->Add(this->button1);
+			this->Name = L"MyForm";
+			this->Text = L"MyForm";
 			this->ResumeLayout(false);
 
 		}

@@ -35,6 +35,9 @@ namespace CurseProject {
 			}
 			Application::Exit();
 		}
+	private: System::Windows::Forms::Button^ ChitatelButton;
+	private: System::Windows::Forms::Button^ AdminButton;
+	protected:
 
 	protected:
 
@@ -42,8 +45,8 @@ namespace CurseProject {
 
 
 
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button2;
+
+
 
 	private:
 		/// <summary>
@@ -58,43 +61,47 @@ namespace CurseProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LoginForm::typeid));
+			this->ChitatelButton = (gcnew System::Windows::Forms::Button());
+			this->AdminButton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// button1
+			// ChitatelButton
 			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->ChitatelButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button1->Location = System::Drawing::Point(54, 95);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(217, 50);
-			this->button1->TabIndex = 7;
-			this->button1->Text = L" Войти как читатель";
-			this->button1->UseVisualStyleBackColor = true;
+			this->ChitatelButton->Location = System::Drawing::Point(54, 95);
+			this->ChitatelButton->Name = L"ChitatelButton";
+			this->ChitatelButton->Size = System::Drawing::Size(251, 50);
+			this->ChitatelButton->TabIndex = 7;
+			this->ChitatelButton->Text = L" Войти как читатель";
+			this->ChitatelButton->UseVisualStyleBackColor = true;
+			this->ChitatelButton->Click += gcnew System::EventHandler(this, &LoginForm::ChitatelButton_Click);
 			// 
-			// button2
+			// AdminButton
 			// 
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->AdminButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button2->Location = System::Drawing::Point(54, 174);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(217, 73);
-			this->button2->TabIndex = 8;
-			this->button2->Text = L" Войти как администратор";
-			this->button2->UseVisualStyleBackColor = true;
+			this->AdminButton->Location = System::Drawing::Point(54, 174);
+			this->AdminButton->Name = L"AdminButton";
+			this->AdminButton->Size = System::Drawing::Size(251, 73);
+			this->AdminButton->TabIndex = 8;
+			this->AdminButton->Text = L" Войти как администратор";
+			this->AdminButton->UseVisualStyleBackColor = true;
+			this->AdminButton->Click += gcnew System::EventHandler(this, &LoginForm::AdminButton_Click);
 			// 
 			// LoginForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(344, 313);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->AdminButton);
+			this->Controls->Add(this->ChitatelButton);
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"LoginForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Вход";
+			this->Load += gcnew System::EventHandler(this, &LoginForm::LoginForm_Load);
 			this->ResumeLayout(false);
 
 		}
@@ -103,5 +110,9 @@ namespace CurseProject {
 	}
 	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+	private: System::Void ChitatelButton_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void LoginForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void AdminButton_Click(System::Object^ sender, System::EventArgs^ e);
 	};
 }
