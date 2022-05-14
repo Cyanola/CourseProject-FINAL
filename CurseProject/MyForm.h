@@ -63,6 +63,8 @@ namespace CurseProject {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Вернуть книги";
 			this->button1->UseVisualStyleBackColor = true;
+		//	this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+
 			// 
 			// MyForm
 			// 
@@ -70,11 +72,17 @@ namespace CurseProject {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(335, 115);
 			this->Controls->Add(this->button1);
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"MyForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
+	//private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+
 	};
 }

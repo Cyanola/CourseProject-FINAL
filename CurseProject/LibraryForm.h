@@ -241,6 +241,7 @@ namespace CurseProject {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridData))->EndInit();
 			this->contextMenuStrip1->ResumeLayout(false);
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion

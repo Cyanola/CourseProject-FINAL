@@ -36,9 +36,6 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="EditForm.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="AdminForm3.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>

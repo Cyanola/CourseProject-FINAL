@@ -275,7 +275,6 @@ void CurseProject::LibraryForm::ShowPovest()	// отображение ввиде таблицы
 			dataGridData->Columns[0]->HeaderCell->Value = "id";
 			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
 			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-			dataGridData->Rows[temp]->Cells[En_name::Napravlenie]->Value = Convert_string_To_String(ones_v[i].Napravlenie);
 			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
 			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
 			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
@@ -301,7 +300,6 @@ void CurseProject::LibraryForm::ShowBask()
 		dataGridData->Columns[0]->HeaderCell->Value = "id";
 		dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
 		dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-		dataGridData->Rows[temp]->Cells[En_name::Napravlenie]->Value = Convert_string_To_String(ones_v[i].Napravlenie);
 		dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
 		dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
 		dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
@@ -327,7 +325,6 @@ void CurseProject::LibraryForm::ShowStih()
 			dataGridData->Columns[0]->HeaderCell->Value = "id";
 			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
 			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-			dataGridData->Rows[temp]->Cells[En_name::Napravlenie]->Value = Convert_string_To_String(ones_v[i].Napravlenie);
 			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
 			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
 			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
@@ -359,7 +356,6 @@ void CurseProject::LibraryForm::ShowRoman()
 			dataGridData->Columns[0]->HeaderCell->Value = "id";
 			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
 			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-			dataGridData->Rows[temp]->Cells[En_name::Napravlenie]->Value = Convert_string_To_String(ones_v[i].Napravlenie);
 			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
 			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
 			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
@@ -391,7 +387,6 @@ void CurseProject::LibraryForm::ShowRasskaz()
 			dataGridData->Columns[0]->HeaderCell->Value = "id";
 			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
 			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-			dataGridData->Rows[temp]->Cells[En_name::Napravlenie]->Value = Convert_string_To_String(ones_v[i].Napravlenie);
 			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
 			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
 			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
@@ -416,7 +411,6 @@ void CurseProject::LibraryForm::Show()
 		dataGridData->Columns[0]->HeaderCell->Value = "id";
 		dataGridData->Rows[i]->Cells[NULL]->Value = Convert::ToString(i + 1);
 		dataGridData->Rows[i]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-		dataGridData->Rows[i]->Cells[En_name::Napravlenie]->Value = Convert_string_To_String(ones_v[i].Napravlenie);
 		dataGridData->Rows[i]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
 		dataGridData->Rows[i]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
 		dataGridData->Rows[i]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);

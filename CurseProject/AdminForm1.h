@@ -40,8 +40,8 @@ namespace CurseProject {
 	private:
 	private: System::Windows::Forms::NumericUpDown^ numericCount;
 	public:
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::CheckBox^ checkBox1;
+
+
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::TextBox^ textBox4;
@@ -54,6 +54,24 @@ namespace CurseProject {
 	public: System::Windows::Forms::Label^ label10;
 	public: System::Windows::Forms::Label^ label9;
 	public: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::GroupBox^ groupBox1;
+	public:
+	private: System::Windows::Forms::NumericUpDown^ numericUpDown2;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDown1;
+	public: System::Windows::Forms::Label^ label2;
+	private:
+	private: System::Windows::Forms::NumericUpDown^ numericUpDown3;
+	public:
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::TextBox^ textBox6;
+
+	private: System::Windows::Forms::TextBox^ textBox8;
+
+	private:
+	public: System::Windows::Forms::Label^ label4;
+	public: System::Windows::Forms::Label^ label5;
+	public: System::Windows::Forms::Label^ label6;
+	public: System::Windows::Forms::Label^ label7;
 
 	private:
 		/// <summary>
@@ -69,10 +87,20 @@ namespace CurseProject {
 		void InitializeComponent(void)
 		{
 			this->groupBox = (gcnew System::Windows::Forms::GroupBox());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->numericUpDown3 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->numericCount = (gcnew System::Windows::Forms::NumericUpDown());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
@@ -85,15 +113,18 @@ namespace CurseProject {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->groupBox->SuspendLayout();
+			this->groupBox1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericCount))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// groupBox
 			// 
+			this->groupBox->Controls->Add(this->groupBox1);
 			this->groupBox->Controls->Add(this->label1);
 			this->groupBox->Controls->Add(this->numericCount);
-			this->groupBox->Controls->Add(this->button1);
-			this->groupBox->Controls->Add(this->checkBox1);
 			this->groupBox->Controls->Add(this->button2);
 			this->groupBox->Controls->Add(this->textBox5);
 			this->groupBox->Controls->Add(this->textBox4);
@@ -109,10 +140,175 @@ namespace CurseProject {
 				static_cast<System::Byte>(204)));
 			this->groupBox->Location = System::Drawing::Point(3, 12);
 			this->groupBox->Name = L"groupBox";
-			this->groupBox->Size = System::Drawing::Size(483, 354);
+			this->groupBox->Size = System::Drawing::Size(483, 275);
 			this->groupBox->TabIndex = 84;
 			this->groupBox->TabStop = false;
 			this->groupBox->Text = L"Добавить книгу";
+			// 
+			// groupBox1
+			// 
+			this->groupBox1->Controls->Add(this->numericUpDown2);
+			this->groupBox1->Controls->Add(this->numericUpDown1);
+			this->groupBox1->Controls->Add(this->label2);
+			this->groupBox1->Controls->Add(this->numericUpDown3);
+			this->groupBox1->Controls->Add(this->button1);
+			this->groupBox1->Controls->Add(this->textBox6);
+			this->groupBox1->Controls->Add(this->textBox8);
+			this->groupBox1->Controls->Add(this->label4);
+			this->groupBox1->Controls->Add(this->label5);
+			this->groupBox1->Controls->Add(this->label6);
+			this->groupBox1->Controls->Add(this->label7);
+			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->groupBox1->Location = System::Drawing::Point(8, 1);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(466, 304);
+			this->groupBox1->TabIndex = 90;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"Добавить книгу";
+			// 
+			// numericUpDown2
+			// 
+			this->numericUpDown2->Location = System::Drawing::Point(256, 90);
+			this->numericUpDown2->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2022, 0, 0, 0 });
+			this->numericUpDown2->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1800, 0, 0, 0 });
+			this->numericUpDown2->Name = L"numericUpDown2";
+			this->numericUpDown2->Size = System::Drawing::Size(183, 24);
+			this->numericUpDown2->TabIndex = 91;
+			this->numericUpDown2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1800, 0, 0, 0 });
+			// 
+			// numericUpDown1
+			// 
+			this->numericUpDown1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->numericUpDown1->Location = System::Drawing::Point(256, 154);
+			this->numericUpDown1->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
+			this->numericUpDown1->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 50, 0, 0, 0 });
+			this->numericUpDown1->Name = L"numericUpDown1";
+			this->numericUpDown1->Size = System::Drawing::Size(183, 27);
+			this->numericUpDown1->TabIndex = 90;
+			this->numericUpDown1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 50, 0, 0, 0 });
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label2->Location = System::Drawing::Point(7, 187);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(224, 22);
+			this->label2->TabIndex = 89;
+			this->label2->Text = L"Количество экземпляров";
+			this->label2->UseWaitCursor = true;
+			// 
+			// numericUpDown3
+			// 
+			this->numericUpDown3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->numericUpDown3->Location = System::Drawing::Point(256, 189);
+			this->numericUpDown3->Margin = System::Windows::Forms::Padding(4);
+			this->numericUpDown3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 9, 0, 0, 0 });
+			this->numericUpDown3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown3->Name = L"numericUpDown3";
+			this->numericUpDown3->Size = System::Drawing::Size(183, 27);
+			this->numericUpDown3->TabIndex = 88;
+			this->numericUpDown3->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// button1
+			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button1->Location = System::Drawing::Point(11, 217);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(428, 53);
+			this->button1->TabIndex = 84;
+			this->button1->Text = L"Добавить";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &AdminForm1::button1_Click);
+			// 
+			// textBox6
+			// 
+			this->textBox6->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox6->Location = System::Drawing::Point(256, 121);
+			this->textBox6->Margin = System::Windows::Forms::Padding(4);
+			this->textBox6->Multiline = true;
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(183, 22);
+			this->textBox6->TabIndex = 71;
+			this->textBox6->UseWaitCursor = true;
+			// 
+			// textBox8
+			// 
+			this->textBox8->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox8->Location = System::Drawing::Point(256, 52);
+			this->textBox8->Margin = System::Windows::Forms::Padding(4);
+			this->textBox8->Multiline = true;
+			this->textBox8->Name = L"textBox8";
+			this->textBox8->Size = System::Drawing::Size(183, 22);
+			this->textBox8->TabIndex = 68;
+			this->textBox8->UseWaitCursor = true;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label4->Location = System::Drawing::Point(7, 153);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(182, 22);
+			this->label4->TabIndex = 66;
+			this->label4->Text = L"Количество страниц";
+			this->label4->UseWaitCursor = true;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label5->Location = System::Drawing::Point(7, 121);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(60, 22);
+			this->label5->TabIndex = 65;
+			this->label5->Text = L"Автор";
+			this->label5->UseWaitCursor = true;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label6->Location = System::Drawing::Point(7, 52);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(92, 22);
+			this->label6->TabIndex = 64;
+			this->label6->Text = L"Название";
+			this->label6->UseWaitCursor = true;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label7->Location = System::Drawing::Point(7, 89);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(116, 22);
+			this->label7->TabIndex = 63;
+			this->label7->Text = L"Год издания";
+			this->label7->UseWaitCursor = true;
 			// 
 			// label1
 			// 
@@ -139,40 +335,12 @@ namespace CurseProject {
 			this->numericCount->TabIndex = 88;
 			this->numericCount->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
-			// button1
-			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->button1->Location = System::Drawing::Point(414, 291);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(50, 53);
-			this->button1->TabIndex = 85;
-			this->button1->Text = L"#";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// checkBox1
-			// 
-			this->checkBox1->AutoSize = true;
-			this->checkBox1->Checked = true;
-			this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->checkBox1->Location = System::Drawing::Point(11, 261);
-			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(311, 24);
-			this->checkBox1->TabIndex = 83;
-			this->checkBox1->Text = L"Очищать форму при добавлении";
-			this->checkBox1->UseVisualStyleBackColor = true;
-			// 
 			// button2
 			// 
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->button2->Location = System::Drawing::Point(6, 291);
+			this->button2->Location = System::Drawing::Point(0, 0);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(386, 53);
-			this->button2->TabIndex = 84;
-			this->button2->Text = L"Добавить";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->TabIndex = 91;
 			// 
 			// textBox5
 			// 
@@ -308,16 +476,23 @@ namespace CurseProject {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(492, 378);
+			this->ClientSize = System::Drawing::Size(458, 288);
 			this->Controls->Add(this->groupBox);
 			this->Name = L"AdminForm1";
-			this->Text = L"AdminForm1";
+			this->Text = L"Вы выбрали добавить: Повесть";
 			this->groupBox->ResumeLayout(false);
 			this->groupBox->PerformLayout();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericCount))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+			  
 	};
 }

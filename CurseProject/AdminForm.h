@@ -77,7 +77,7 @@ namespace CurseProject {
 
 	public:
 	private: System::Windows::Forms::ListBox^ BookBox;
-	private: System::Windows::Forms::Button^ DeleteBook;
+
 
 
 
@@ -147,14 +147,13 @@ private: System::Windows::Forms::Button^ button1;
 		void InitializeComponent(void)
 		{
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->Rasskaz = (gcnew System::Windows::Forms::Button());
 			this->Stih = (gcnew System::Windows::Forms::Button());
 			this->Povest = (gcnew System::Windows::Forms::Button());
 			this->Roman = (gcnew System::Windows::Forms::Button());
 			this->BookBox = (gcnew System::Windows::Forms::ListBox());
-			this->DeleteBook = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
@@ -164,7 +163,6 @@ private: System::Windows::Forms::Button^ button1;
 			this->groupBox1->Controls->Add(this->button1);
 			this->groupBox1->Controls->Add(this->groupBox2);
 			this->groupBox1->Controls->Add(this->BookBox);
-			this->groupBox1->Controls->Add(this->DeleteBook);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->groupBox1->Location = System::Drawing::Point(12, 12);
@@ -173,6 +171,17 @@ private: System::Windows::Forms::Button^ button1;
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Добавление книги";
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(460, 520);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(108, 59);
+			this->button1->TabIndex = 89;
+			this->button1->Text = L"Выход";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &AdminForm::button1_Click);
 			// 
 			// groupBox2
 			// 
@@ -238,33 +247,14 @@ private: System::Windows::Forms::Button^ button1;
 			this->BookBox->TabIndex = 0;
 			this->BookBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::BookBox_SelectedIndexChanged);
 			// 
-			// DeleteBook
-			// 
-			this->DeleteBook->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->DeleteBook->Location = System::Drawing::Point(12, 520);
-			this->DeleteBook->Name = L"DeleteBook";
-			this->DeleteBook->Size = System::Drawing::Size(186, 63);
-			this->DeleteBook->TabIndex = 87;
-			this->DeleteBook->Text = L"Удалить выбранную книгу\r\n\r\n";
-			this->DeleteBook->UseVisualStyleBackColor = true;
-			this->DeleteBook->Click += gcnew System::EventHandler(this, &AdminForm::DeleteBook_Click);
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(454, 524);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(108, 55);
-			this->button1->TabIndex = 89;
-			this->button1->Text = L"Выход";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
 			// AdminForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(592, 607);
 			this->Controls->Add(this->groupBox1);
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"AdminForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Вы вошли как: Администратор";
@@ -274,20 +264,13 @@ private: System::Windows::Forms::Button^ button1;
 
 		}
 #pragma endregion
-		private: System::Void Roman_Click(System::Object^ sender, System::EventArgs^ e) {
-		}
-
-private: System::Void Stih_Click(System::Object^ sender, System::EventArgs^ e) {
-}
+		private: System::Void Roman_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void Stih_Click(System::Object^ sender, System::EventArgs^ e);
 	   private: System::Void BookBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 	   }
-			  private: System::Void Povest_Click(System::Object^ sender, System::EventArgs^ e) {
-			  }
-					 private: System::Void Rasskaz_Click(System::Object^ sender, System::EventArgs^ e) {
-					 }
-							private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-							}
-								   private: System::Void DeleteBook_Click(System::Object^ sender, System::EventArgs^ e) {
-								   }
+			  private: System::Void Povest_Click(System::Object^ sender, System::EventArgs^ e);
+					 private: System::Void Rasskaz_Click(System::Object^ sender, System::EventArgs^ e);
+							private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+
 };
 }

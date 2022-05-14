@@ -82,6 +82,7 @@
     <Link>
       <AdditionalDependencies />
       <EntryPointSymbol>main</EntryPointSymbol>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -124,7 +125,6 @@
     <ClCompile Include="AdminForm3.cpp" />
     <ClCompile Include="AdminForm4.cpp" />
     <ClCompile Include="Classes.cpp" />
-    <ClCompile Include="EditForm.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="AdminForm.cpp" />
@@ -182,6 +182,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.h</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AutorizationForm.resx">
       <DependentUpon>AutorizationForm.h</DependentUpon>

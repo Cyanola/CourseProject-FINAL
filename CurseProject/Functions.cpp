@@ -70,18 +70,15 @@ vector<Ones> ReturnCell(vector<string> s, int count)
 				ones_v[i].Nazvanie = cat.str();
 				break;
 			case 1:
-				ones_v[i].Napravlenie = cat.str();
-				break;
-			case 2:
 				ones_v[i].Year = cat.str();
 				break;
-			case 3:
+			case 2:
 				ones_v[i].Author = cat.str();
 				break;
-			case 4:
+			case 3:
 				ones_v[i].Pages = cat.str();
 				break;
-			case 5:
+			case 4:
 				ones_v[i].Ekzemps = cat.str();
 				break;
 			default:

@@ -61,7 +61,6 @@ namespace CurseProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LoginForm::typeid));
 			this->ChitatelButton = (gcnew System::Windows::Forms::Button());
 			this->AdminButton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
@@ -98,11 +97,14 @@ namespace CurseProject {
 			this->Controls->Add(this->AdminButton);
 			this->Controls->Add(this->ChitatelButton);
 			this->Margin = System::Windows::Forms::Padding(4);
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"LoginForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"¬ход";
 			this->Load += gcnew System::EventHandler(this, &LoginForm::LoginForm_Load);
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
