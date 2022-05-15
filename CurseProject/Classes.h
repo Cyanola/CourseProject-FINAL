@@ -12,12 +12,12 @@ using namespace std;
 #define FILE_BASKET_NAME "Basket.txt"		//
 #define FILE_NAME "Data.txt"				// Имена Файлов
 #define FILE_MAIN_NAME "DefaultData.txt"
-#define SEARCH_EXP_NEW R"(\w{2,30}\s\w{2,10}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" //Общее регулярное выражение
-#define SEARCH_POVEST R"((Повесть)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для повестей
+#define SEARCH_EXP_NEW R"(\w{2,30}\s\w{2,10}\s\d{4}\s\w{3,15}\s\d{2,5}\s\d{1})" //Общее регулярное выражение
+#define SEARCH_POVEST R"((Повесть)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,5}\s\d{1})" // Регулярное выражение для повестей
 #define SEARCH_STIH R"((Стихотворение)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для стихотворений
-#define SEARCH_ROMAN R"((Роман)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для романов
-#define SEARCH_RASSKAZ R"((Рассказ)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для рассказов
-#define BITSTRING R"((\w{2,35}\s)|(\d{1})|(\d{2,15}))"
+#define SEARCH_ROMAN R"((Роман)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,5}\s\d{1})" // Регулярное выражение для романов
+#define SEARCH_RASSKAZ R"((Рассказ)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,5}\s\d{1})" // Регулярное выражение для рассказов
+#define BITSTRING R"((\w{2,35}\s)|(\d{1})|(\d{2,5}))"
 #define SPACE R"(^\s)"
 
 enum En_name

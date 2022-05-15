@@ -146,6 +146,7 @@ System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, Sy
 	if (basket_temp_name[NULL] == "") MessageBox::Show("Ваша корзина пуста", "Упс...");
 	else
 	{
+		this->button2->Enabled = false;
 		srand(time(NULL));
 		int day = 1 + rand() % 30;
 		this->temp = gcnew Temp();
@@ -180,37 +181,36 @@ void CurseProject::LibraryForm::Headers()
 	HeaderC();
 	HeaderD();
 	HeaderE();
-	HeaderF();
 }
-
-void CurseProject::LibraryForm::Headers_B()
-{
-	HeaderA();
-	HeaderB();
-	HeaderC();
-	HeaderD();
-	HeaderE();
-	HeaderF();
-}
-void CurseProject::LibraryForm::HeaderA()
+void CurseProject::LibraryForm::HeaderA_busk()
 {
 	dataGridData->TopLeftHeaderCell->Value = "###";
 	DataGridViewTextBoxColumn^ c1 = gcnew DataGridViewTextBoxColumn();
 	c1->Name = "Список";
-	c1->HeaderText = "Направление";
+	c1->HeaderText = "Название";
 	c1->Width = 150;
 	dataGridData->Columns->Add(c1);
 
 	dataGridData->AutoResizeColumn(0);
 }
 //new
-void CurseProject::LibraryForm::HeaderB()
+void CurseProject::LibraryForm::HeaderA()
 {
 	DataGridViewTextBoxColumn^ c2 = gcnew DataGridViewTextBoxColumn();
 	c2->Name = "Список";
 	c2->HeaderText = "Название";
 	c2->Width = 150;
 	dataGridData->Columns->Add(c2);
+
+	dataGridData->AutoResizeColumn(0);
+}
+void CurseProject::LibraryForm::HeaderB()
+{
+	DataGridViewTextBoxColumn^ c5 = gcnew DataGridViewTextBoxColumn();
+	c5->Name = "Список";
+	c5->HeaderText = "Год издания";
+	c5->Width = 150;
+	dataGridData->Columns->Add(c5);
 
 	dataGridData->AutoResizeColumn(0);
 }
@@ -236,18 +236,15 @@ void CurseProject::LibraryForm::HeaderD()
 	dataGridData->AutoResizeColumn(0);
 }
 
-void CurseProject::LibraryForm::HeaderE()
+void CurseProject::LibraryForm::Headers_B()
 {
-	DataGridViewTextBoxColumn^ c5 = gcnew DataGridViewTextBoxColumn();
-	c5->Name = "Список";
-	c5->HeaderText = "Год издания";
-	c5->Width = 150;
-	dataGridData->Columns->Add(c5);
-
-	dataGridData->AutoResizeColumn(0);
+	HeaderA_busk();
+	HeaderB();
+	HeaderC();
+	HeaderD();
+	HeaderE();
 }
-
-void CurseProject::LibraryForm::HeaderF()
+void CurseProject::LibraryForm::HeaderE()
 {
 	DataGridViewTextBoxColumn^ c6 = gcnew DataGridViewTextBoxColumn();
 	c6->Name = "Список";
@@ -275,9 +272,9 @@ void CurseProject::LibraryForm::ShowPovest()	// отображение ввиде таблицы
 			dataGridData->Columns[0]->HeaderCell->Value = "id";
 			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
 			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
+			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year); 
+			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author); 
 			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
-			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
-			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
 			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
 			dataGridData->AutoResizeColumn(0);
 			dataGridData->AutoResizeRows();
@@ -296,13 +293,13 @@ void CurseProject::LibraryForm::ShowBask()
 	vector<Ones> ones_v = ReturnCell(v, basket.GetBC());
 	for (int i = 0; i < basket.GetBC(); i++)
 	{
-		dataGridData->Rows[temp]->HeaderCell->Value = "=>";
-		dataGridData->Columns[0]->HeaderCell->Value = "id";
-		dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
+		dataGridData->Rows[temp]->HeaderCell->Value = Convert::ToString(i + 1) + ".";
+		dataGridData->Columns[0]->HeaderCell->Value = "Корзина";
+		dataGridData->Rows[temp]->Cells[NULL]->Value = "##########";
 		dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-		dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
-		dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
 		dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
+		dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
+		dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
 		dataGridData->AutoResizeColumn(0);
 		dataGridData->AutoResizeRows();
 		temp++;
@@ -325,9 +322,9 @@ void CurseProject::LibraryForm::ShowStih()
 			dataGridData->Columns[0]->HeaderCell->Value = "id";
 			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
 			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
-			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
 			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
+			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
+			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
 			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
 			dataGridData->AutoResizeColumn(0);
 			dataGridData->AutoResizeRows();
@@ -356,9 +353,9 @@ void CurseProject::LibraryForm::ShowRoman()
 			dataGridData->Columns[0]->HeaderCell->Value = "id";
 			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
 			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
-			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
 			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
+			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
+			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
 			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
 			dataGridData->AutoResizeColumn(0);
 			dataGridData->AutoResizeRows();
@@ -387,9 +384,9 @@ void CurseProject::LibraryForm::ShowRasskaz()
 			dataGridData->Columns[0]->HeaderCell->Value = "id";
 			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
 			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
-			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
 			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
+			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
+			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
 			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
 			dataGridData->AutoResizeColumn(0);
 			dataGridData->AutoResizeRows();
@@ -411,9 +408,9 @@ void CurseProject::LibraryForm::Show()
 		dataGridData->Columns[0]->HeaderCell->Value = "id";
 		dataGridData->Rows[i]->Cells[NULL]->Value = Convert::ToString(i + 1);
 		dataGridData->Rows[i]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-		dataGridData->Rows[i]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
-		dataGridData->Rows[i]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
 		dataGridData->Rows[i]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
+		dataGridData->Rows[i]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
+		dataGridData->Rows[i]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
 		dataGridData->Rows[i]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
 		dataGridData->AutoResizeColumn(0);
 		dataGridData->AutoResizeRows();

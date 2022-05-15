@@ -76,7 +76,7 @@ namespace CurseProject {
 
 
 	public:
-	private: System::Windows::Forms::ListBox^ BookBox;
+
 
 
 
@@ -116,6 +116,9 @@ namespace CurseProject {
 	private: System::Windows::Forms::Button^ Povest;
 	private: System::Windows::Forms::Button^ Roman;
 private: System::Windows::Forms::Button^ button1;
+private: System::Windows::Forms::Button^ Dat;
+private: System::Windows::Forms::Button^ ShowA;
+private: System::Windows::Forms::DataGridView^ dataGridView1;
 
 
 
@@ -147,22 +150,25 @@ private: System::Windows::Forms::Button^ button1;
 		void InitializeComponent(void)
 		{
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->Rasskaz = (gcnew System::Windows::Forms::Button());
 			this->Stih = (gcnew System::Windows::Forms::Button());
 			this->Povest = (gcnew System::Windows::Forms::Button());
 			this->Roman = (gcnew System::Windows::Forms::Button());
-			this->BookBox = (gcnew System::Windows::Forms::ListBox());
+			this->Dat = (gcnew System::Windows::Forms::Button());
+			this->ShowA = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->Controls->Add(this->dataGridView1);
 			this->groupBox1->Controls->Add(this->button1);
 			this->groupBox1->Controls->Add(this->groupBox2);
-			this->groupBox1->Controls->Add(this->BookBox);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->groupBox1->Location = System::Drawing::Point(12, 12);
@@ -171,6 +177,16 @@ private: System::Windows::Forms::Button^ button1;
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Добавление книги";
+			this->groupBox1->Enter += gcnew System::EventHandler(this, &AdminForm::groupBox1_Enter);
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeight = 29;
+			this->dataGridView1->Location = System::Drawing::Point(0, 26);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->RowHeadersWidth = 51;
+			this->dataGridView1->Size = System::Drawing::Size(562, 315);
+			this->dataGridView1->TabIndex = 0;
 			// 
 			// button1
 			// 
@@ -236,22 +252,39 @@ private: System::Windows::Forms::Button^ button1;
 			this->Roman->UseVisualStyleBackColor = true;
 			this->Roman->Click += gcnew System::EventHandler(this, &AdminForm::Roman_Click);
 			// 
-			// BookBox
+			// Dat
 			// 
-			this->BookBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->BookBox->FormattingEnabled = true;
-			this->BookBox->ItemHeight = 20;
-			this->BookBox->Location = System::Drawing::Point(6, 26);
-			this->BookBox->Name = L"BookBox";
-			this->BookBox->Size = System::Drawing::Size(562, 304);
-			this->BookBox->TabIndex = 0;
-			this->BookBox->SelectedIndexChanged += gcnew System::EventHandler(this, &AdminForm::BookBox_SelectedIndexChanged);
+			this->Dat->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->Dat->Location = System::Drawing::Point(605, 129);
+			this->Dat->Margin = System::Windows::Forms::Padding(4);
+			this->Dat->Name = L"Dat";
+			this->Dat->Size = System::Drawing::Size(242, 72);
+			this->Dat->TabIndex = 3;
+			this->Dat->Text = L"Передать товары в магазин";
+			this->Dat->UseVisualStyleBackColor = true;
+			this->Dat->Click += gcnew System::EventHandler(this, &AdminForm::Dat_Click);
+			// 
+			// ShowA
+			// 
+			this->ShowA->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->ShowA->Location = System::Drawing::Point(605, 38);
+			this->ShowA->Margin = System::Windows::Forms::Padding(4);
+			this->ShowA->Name = L"ShowA";
+			this->ShowA->Size = System::Drawing::Size(242, 64);
+			this->ShowA->TabIndex = 2;
+			this->ShowA->Text = L"Склад";
+			this->ShowA->UseVisualStyleBackColor = true;
+			this->ShowA->Click += gcnew System::EventHandler(this, &AdminForm::ShowA_Click);
 			// 
 			// AdminForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(592, 607);
+			this->ClientSize = System::Drawing::Size(870, 607);
+			this->Controls->Add(this->Dat);
+			this->Controls->Add(this->ShowA);
 			this->Controls->Add(this->groupBox1);
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
@@ -259,18 +292,23 @@ private: System::Windows::Forms::Button^ button1;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Вы вошли как: Администратор";
 			this->groupBox1->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->groupBox2->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+		private: System::Void ShowA_Click(System::Object^ sender, System::EventArgs^ e);
+	private: void ShowAdmin();
+	private: void HeaderAdmin();
 		private: System::Void Roman_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void Stih_Click(System::Object^ sender, System::EventArgs^ e);
-	   private: System::Void BookBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-	   }
 			  private: System::Void Povest_Click(System::Object^ sender, System::EventArgs^ e);
 					 private: System::Void Rasskaz_Click(System::Object^ sender, System::EventArgs^ e);
 							private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
-
+private: void Show_Admin_retry();
+	   private: System::Void Dat_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

@@ -234,6 +234,8 @@ namespace CurseProject {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->butbask);
 			this->Controls->Add(this->groupBox1);
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"LibraryForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Библиотека";
@@ -245,7 +247,7 @@ namespace CurseProject {
 
 		}
 #pragma endregion
-	 private: System::Void ALL_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void ALL_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void Stih_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void Roman_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void Rasskaz_Click(System::Object^ sender, System::EventArgs^ e);
@@ -258,7 +260,6 @@ private: void HeaderB();
 private: void HeaderC();
 	   private: void HeaderD();
 			  private: void HeaderE();
-					 void HeaderF();
 private: void ShowStih();
 private: void ShowPovest();
 	   void ShowRoman();
@@ -269,6 +270,6 @@ private: System::Void Bask_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
 	   void Headers();
 	   void Headers_B();
-
+private: void HeaderA_busk();
 };
 }

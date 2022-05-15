@@ -4,7 +4,7 @@ using namespace System;
 using namespace System::Threading::Tasks;
 Admin::Admin()
 {
-	ifstream File(FILE_MAIN_NAME);	// конструктор ворует начальные данные
+	ifstream File(FILE_NAME);	// конструктор ворует начальные данные
 	if (File.is_open())
 	{
 		count = 0;

@@ -4,7 +4,7 @@ using namespace System;
 
 void SetData()	// Функция возвращение данных в исходный вид
 {
-	ifstream File_Default(FILE_MAIN_NAME);
+	ifstream File_Default(FILE_NAME);
 	vector<string> temp_data; string temp;
 	if (!File_Default.is_open()) throw exception("File read error");
 	while (!File_Default.eof()) {

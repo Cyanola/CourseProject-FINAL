@@ -56,12 +56,10 @@ namespace CurseProject {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AutorizationForm::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->Backkk = (gcnew System::Windows::Forms::Button());
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->backgroundWorker1 = (gcnew System::ComponentModel::BackgroundWorker());
-
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
@@ -89,7 +87,12 @@ namespace CurseProject {
 			this->Backkk->Text = L"Назад";
 			this->Backkk->UseVisualStyleBackColor = true;
 			this->Backkk->Click += gcnew System::EventHandler(this, &AutorizationForm::Backkk_Click);
-
+			// 
+			// contextMenuStrip1
+			// 
+			this->contextMenuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->contextMenuStrip1->Name = L"contextMenuStrip1";
+			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
 			// 
 			// button1
 			// 
@@ -101,7 +104,6 @@ namespace CurseProject {
 			this->button1->Text = L"Вход";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &AutorizationForm::button1_Click);
-
 			// 
 			// textBox1
 			// 
@@ -115,12 +117,6 @@ namespace CurseProject {
 			this->textBox1->Size = System::Drawing::Size(147, 28);
 			this->textBox1->TabIndex = 4;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &AutorizationForm::textBox1_TextChanged);
-
-			// 
-			// // contextMenuStrip1
-			// 
-			this->contextMenuStrip1->Name = L"contextMenuStrip1";
-			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
 			// 
 			// AutorizationForm
 			// 
@@ -131,8 +127,10 @@ namespace CurseProject {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
-			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"AutorizationForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Авторизация";
 			this->ResumeLayout(false);
 			this->PerformLayout();
