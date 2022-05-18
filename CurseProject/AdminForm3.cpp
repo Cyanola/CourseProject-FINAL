@@ -3,7 +3,7 @@
 #include "Classes.h"
 System::Void CurseProject::AdminForm3::button2_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	String^ str = "Роман ";
+	String^ str = "Roman ";
 	str += textBox1->Text->ToString() + " "
 		+ numericUpDown2->Text->ToString() + " "
 		+ textBox4->Text->ToString() + " "

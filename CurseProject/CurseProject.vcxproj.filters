@@ -48,6 +48,12 @@
     <ClCompile Include="AdminForm2.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="AdminForm5.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminForm6.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LoginForm.h">
@@ -84,6 +90,12 @@
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="AdminForm2.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="AdminForm5.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="AdminForm6.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
   </ItemGroup>

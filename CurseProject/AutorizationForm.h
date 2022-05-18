@@ -79,6 +79,7 @@ namespace CurseProject {
 			// 
 			// Backkk
 			// 
+			this->Backkk->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Backkk->Location = System::Drawing::Point(4, 108);
 			this->Backkk->Margin = System::Windows::Forms::Padding(4);
 			this->Backkk->Name = L"Backkk";
@@ -96,6 +97,7 @@ namespace CurseProject {
 			// 
 			// button1
 			// 
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->Location = System::Drawing::Point(199, 52);
 			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";

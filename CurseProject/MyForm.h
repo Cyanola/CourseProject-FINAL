@@ -55,6 +55,7 @@ namespace CurseProject {
 			// 
 			// button1
 			// 
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button1->Location = System::Drawing::Point(42, 41);
@@ -64,7 +65,6 @@ namespace CurseProject {
 			this->button1->Text = L"Вернуть книги";
 			this->button1->UseVisualStyleBackColor = true;
 		//	this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
-
 			// 
 			// MyForm
 			// 
@@ -78,7 +78,6 @@ namespace CurseProject {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm";
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion

@@ -1,9 +1,9 @@
 #include "AdminForm2.h"
 #include "Functions.h"
 #include "Classes.h"
-System::Void CurseProject::AdminForm2::button2_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void CurseProject::AdminForm2::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	String^ str = "Стихотворение ";
+	String^ str = "Stihotvorenie ";
 	str += textBox8->Text->ToString() + " "
 		+ numericUpDown2->Text->ToString() + " "
 		+ textBox6->Text->ToString() + " "

@@ -4,7 +4,7 @@ using namespace System;
 
 void SetData()	// Функция возвращение данных в исходный вид
 {
-	ifstream File_Default(FILE_NAME);
+	ifstream File_Default(FILE_MAIN_NAME);
 	vector<string> temp_data; string temp;
 	if (!File_Default.is_open()) throw exception("File read error");
 	while (!File_Default.eof()) {
@@ -21,6 +21,7 @@ void SetData()	// Функция возвращение данных в исходный вид
 
 	File_Data.close();
 }
+
 void ReGroupData()
 {
 	std::vector<std::string> regroup;
@@ -34,6 +35,7 @@ void ReGroupData()
 		else File_New << regroup[i] << endl;
 	}
 }
+
 std::string Stos(System::String^ s) // из String в std::string
 {
 	using namespace System::Runtime::InteropServices;
@@ -67,18 +69,21 @@ vector<Ones> ReturnCell(vector<string> s, int count)
 			switch (iterator)
 			{
 			case 0:
-				ones_v[i].Nazvanie = cat.str();
+				ones_v[i].Janr = cat.str();
 				break;
 			case 1:
-				ones_v[i].Year = cat.str();
+				ones_v[i].Nazvanie = cat.str();
 				break;
 			case 2:
-				ones_v[i].Author = cat.str();
+				ones_v[i].Year = cat.str();
 				break;
 			case 3:
-				ones_v[i].Pages = cat.str();
+				ones_v[i].Author = cat.str();
 				break;
 			case 4:
+				ones_v[i].Pages = cat.str();
+				break;
+			case 5:
 				ones_v[i].Ekzemps = cat.str();
 				break;
 			default:

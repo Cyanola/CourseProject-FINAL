@@ -2,10 +2,7 @@
 #include "AdminForm.h"
 #include "LoginForm.h"
 
-System::Void CurseProject::AutorizationForm::textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e)
-{
-    /*return System::Void();*/
-}
+System::Void CurseProject::AutorizationForm::textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e){}
 
 System::Void CurseProject::AutorizationForm::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {

@@ -1,14 +1,14 @@
-#include "AdminForm4.h"
+#include "AdminForm5.h"
 #include "Functions.h"
 #include "Classes.h"
-System::Void CurseProject::AdminForm4::button2_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void CurseProject::AdminForm5::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	String^ str = "Rasskaz ";
-	str += textBox1->Text->ToString() + " "
+	String^ str = "Skazka ";
+	str += textBox8->Text->ToString() + " "
 		+ numericUpDown2->Text->ToString() + " "
-		+ textBox4->Text->ToString() + " "
+		+ textBox6->Text->ToString() + " "
 		+ numericUpDown1->Text->ToString() + " "
-		+ numericCount->Text->ToString();
+		+ numericUpDown3->Text->ToString();
 	std::string temp = Stos(str);
 	std::ofstream File(FILE_MAIN_NAME, std::ios::app);
 	File << "\n" << temp;
@@ -16,4 +16,5 @@ System::Void CurseProject::AdminForm4::button2_Click(System::Object^ sender, Sys
 	File.close();
 	this->Close();
 }
+
 

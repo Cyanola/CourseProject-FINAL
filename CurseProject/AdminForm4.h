@@ -104,27 +104,27 @@ namespace CurseProject {
 			// 
 			// numericUpDown2
 			// 
-			this->numericUpDown2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numericUpDown2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->numericUpDown2->Location = System::Drawing::Point(265, 73);
 			this->numericUpDown2->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2022, 0, 0, 0 });
 			this->numericUpDown2->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1800, 0, 0, 0 });
 			this->numericUpDown2->Name = L"numericUpDown2";
-			this->numericUpDown2->Size = System::Drawing::Size(183, 27);
+			this->numericUpDown2->Size = System::Drawing::Size(183, 24);
 			this->numericUpDown2->TabIndex = 102;
 			this->numericUpDown2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1800, 0, 0, 0 });
 			// 
 			// numericUpDown1
 			// 
-			this->numericUpDown1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numericUpDown1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->numericUpDown1->Location = System::Drawing::Point(265, 137);
 			this->numericUpDown1->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown1->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 50, 0, 0, 0 });
 			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(183, 27);
+			this->numericUpDown1->Size = System::Drawing::Size(183, 24);
 			this->numericUpDown1->TabIndex = 101;
 			this->numericUpDown1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 50, 0, 0, 0 });
 			// 
@@ -134,7 +134,7 @@ namespace CurseProject {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label1->Location = System::Drawing::Point(16, 177);
+			this->label1->Location = System::Drawing::Point(16, 174);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(224, 22);
@@ -144,19 +144,20 @@ namespace CurseProject {
 			// 
 			// numericCount
 			// 
-			this->numericCount->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numericCount->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->numericCount->Location = System::Drawing::Point(265, 172);
 			this->numericCount->Margin = System::Windows::Forms::Padding(4);
 			this->numericCount->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 9, 0, 0, 0 });
 			this->numericCount->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericCount->Name = L"numericCount";
-			this->numericCount->Size = System::Drawing::Size(183, 27);
+			this->numericCount->Size = System::Drawing::Size(183, 24);
 			this->numericCount->TabIndex = 99;
 			this->numericCount->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
 			// button2
 			// 
+			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button2->Location = System::Drawing::Point(21, 206);
@@ -165,12 +166,13 @@ namespace CurseProject {
 			this->button2->TabIndex = 98;
 			this->button2->Text = L"Добавить";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &AdminForm4::button2_Click);
 			// 
 			// textBox4
 			// 
-			this->textBox4->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox4->Location = System::Drawing::Point(265, 104);
+			this->textBox4->Location = System::Drawing::Point(265, 107);
 			this->textBox4->Margin = System::Windows::Forms::Padding(4);
 			this->textBox4->Multiline = true;
 			this->textBox4->Name = L"textBox4";
@@ -180,7 +182,7 @@ namespace CurseProject {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox1->Location = System::Drawing::Point(265, 43);
 			this->textBox1->Margin = System::Windows::Forms::Padding(4);
@@ -196,7 +198,7 @@ namespace CurseProject {
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label11->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label11->Location = System::Drawing::Point(16, 136);
+			this->label11->Location = System::Drawing::Point(17, 139);
 			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(182, 22);
@@ -210,7 +212,7 @@ namespace CurseProject {
 			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label10->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label10->Location = System::Drawing::Point(16, 104);
+			this->label10->Location = System::Drawing::Point(17, 104);
 			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(60, 22);
@@ -224,7 +226,7 @@ namespace CurseProject {
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label9->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label9->Location = System::Drawing::Point(16, 35);
+			this->label9->Location = System::Drawing::Point(17, 43);
 			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(92, 22);
@@ -238,7 +240,7 @@ namespace CurseProject {
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label8->Location = System::Drawing::Point(16, 72);
+			this->label8->Location = System::Drawing::Point(17, 75);
 			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(116, 22);
@@ -250,7 +252,7 @@ namespace CurseProject {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(464, 295);
+			this->ClientSize = System::Drawing::Size(464, 263);
 			this->Controls->Add(this->numericUpDown2);
 			this->Controls->Add(this->numericUpDown1);
 			this->Controls->Add(this->label1);
@@ -265,6 +267,7 @@ namespace CurseProject {
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
 			this->Name = L"AdminForm4";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Вы выбрали добавить:  Рассказ";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();

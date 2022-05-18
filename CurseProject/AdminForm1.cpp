@@ -6,7 +6,7 @@ using namespace System;
 
 System::Void CurseProject::AdminForm1::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	String^ str = "Повесть ";
+	String^ str = "Povest ";
 	str += textBox8->Text->ToString() + " "
 		+ numericUpDown2->Text->ToString() + " "
 		+ textBox6->Text->ToString() + " "

@@ -124,6 +124,8 @@
     <ClCompile Include="AdminForm2.cpp" />
     <ClCompile Include="AdminForm3.cpp" />
     <ClCompile Include="AdminForm4.cpp" />
+    <ClCompile Include="AdminForm5.cpp" />
+    <ClCompile Include="AdminForm6.cpp" />
     <ClCompile Include="Classes.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="LoginForm.cpp" />
@@ -143,6 +145,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="AdminForm4.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AdminForm5.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AdminForm6.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Classes.h" />
@@ -176,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm4.resx">
       <DependentUpon>AdminForm4.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm5.resx">
+      <DependentUpon>AdminForm5.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm6.resx">
+      <DependentUpon>AdminForm6.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>

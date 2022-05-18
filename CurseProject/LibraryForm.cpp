@@ -14,7 +14,7 @@ System::Void CurseProject::LibraryForm::ALL_Click(System::Object^ sender, System
 	Object_ obj; auto v = obj.Print(); obj.item();
 	dataGridData->RowCount = obj.GetCount();
 	if (v[NULL] == "") {
-		MessageBox::Show("Библиотека закрыта, ведется уборка помещения.", "Упсс....");
+		MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс...");
 		dataGridData->Rows->Clear();
 		dataGridData->Columns->Clear();
 	}
@@ -25,6 +25,7 @@ System::Void CurseProject::LibraryForm::ALL_Click(System::Object^ sender, System
 		Show();
 	}
 }
+
 System::Void CurseProject::LibraryForm::Povest_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	dataGridData->Rows->Clear();
@@ -32,7 +33,7 @@ System::Void CurseProject::LibraryForm::Povest_Click(System::Object^ sender, Sys
 	Povest_ povest; Object_ obj;
 	auto v = obj.Print();
 	dataGridData->RowCount = povest.GetCount();
-	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения.", "Упсс....");
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
 	else
 	{
 		Headers();
@@ -46,12 +47,40 @@ System::Void CurseProject::LibraryForm::Stih_Click(System::Object^ sender, Syste
 	dataGridData->Columns->Clear();
 	Stih_ stih; Object_ obj; auto v = obj.Print();
 	dataGridData->RowCount = stih.GetCount();
-	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения.", "Упсс....");
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
 	else
 	{
 		Headers();
 		dataGridData->AutoResizeRows();
 		ShowStih();
+	}
+}
+System::Void CurseProject::LibraryForm::Skazka_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	dataGridData->Rows->Clear();
+	dataGridData->Columns->Clear();
+	Skazka_ skazka; Object_ obj; auto v = obj.Print();
+	dataGridData->RowCount = skazka.GetCount();
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
+	else
+	{
+		Headers();
+		dataGridData->AutoResizeRows();
+		ShowSkazka();
+	}
+}
+System::Void CurseProject::LibraryForm::Myth_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	dataGridData->Rows->Clear();
+	dataGridData->Columns->Clear();
+	Myth_ myth; Object_ obj; auto v = obj.Print();
+	dataGridData->RowCount = myth.GetCount();
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
+	else
+	{
+		Headers();
+		dataGridData->AutoResizeRows();
+		ShowMyth();
 	}
 }
 
@@ -61,7 +90,7 @@ System::Void CurseProject::LibraryForm::Roman_Click(System::Object^ sender, Syst
 	dataGridData->Columns->Clear();
 	Roman_ roman; Object_ obj; auto v = obj.Print();
 	dataGridData->RowCount = roman.GetCount();
-	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения.", "Упсс....");
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
 	else
 	{
 		Headers();
@@ -69,13 +98,14 @@ System::Void CurseProject::LibraryForm::Roman_Click(System::Object^ sender, Syst
 		ShowRoman();
 	}
 }
+
 System::Void CurseProject::LibraryForm::Rasskaz_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	dataGridData->Rows->Clear();
 	dataGridData->Columns->Clear();
 	Rasskaz_ rasskaz; Object_ obj; auto v = obj.Print();
 	dataGridData->RowCount = rasskaz.GetCount();
-	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения.", "Упсс....");
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
 	else
 	{
 		Headers();
@@ -83,6 +113,7 @@ System::Void CurseProject::LibraryForm::Rasskaz_Click(System::Object^ sender, Sy
 		ShowRasskaz();
 	}
 }
+
 System::Void CurseProject::LibraryForm::butbask_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	Basket_ basket; auto valuebasket_temp = basket.GetBK();
@@ -97,6 +128,7 @@ System::Void CurseProject::LibraryForm::butbask_Click(System::Object^ sender, Sy
 		ShowBask();
 	}
 }
+
 System::Void CurseProject::LibraryForm::Bask_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	Basket_ basket; Object_ object; vector<string> vector_items;
@@ -134,7 +166,7 @@ System::Void CurseProject::LibraryForm::Bask_Click(System::Object^ sender, Syste
 		}
 		catch (Exception^ e)
 		{
-			MessageBox::Show("Неверно выбран индекс", "Упс.");
+			MessageBox::Show("Неизвестная ошибка", "Упс...");
 		}
 	}
 }
@@ -143,35 +175,35 @@ System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, Sy
 {
 	Basket_ basket_name;
 	auto basket_temp_name = basket_name.GetBK();
-	if (basket_temp_name[NULL] == "") MessageBox::Show("Ваша корзина пуста", "Упс...");
+	if (basket_temp_name[NULL] == "") MessageBox::Show("Вы не выбрали книги", "Упс...");
 	else
 	{
-		this->button2->Enabled = false;
+		
 		srand(time(NULL));
 		int day = 1 + rand() % 30;
 		this->temp = gcnew Temp();
+		this->temp->order_id = Guid::NewGuid();
 		this->temp->value = day;
 		// поток доставки
 		Task<System::Guid>^ thread = gcnew Task<System::Guid>(gcnew Func<Guid>(temp, &Temp::D));
-		thread->ContinueWith(gcnew Action<Task<Guid>^>(temp, &Temp::B)); // :(
+		thread->ContinueWith(gcnew Action<Task<Guid>^>(temp, &Temp::B));
 		thread->Start();
 		// поток доставки
 		fstream File(FILE_BASKET_NAME, ios::out);
 		DateTime date1 = DateTime::Today;
 		DateTime answer = date1.AddDays(day);
 		int day_temp = Convert::ToInt16(date1.Day) + day;
-		String^ Str = answer.ToString("m") + " <= Вам нужно вернуть книги к этой дате: ";
+		String^ Str = answer.ToString("m") + " <= дата возврата книг ";
 		MessageBox::Show(Str, "Успешно");
 		dataGridData->Rows->Clear();
 		dataGridData->Columns->Clear();
-			MyForm^ form = gcnew MyForm();
-			form->Show();
 	}
 }
+
 System::Void CurseProject::LibraryForm::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	Form::Hide();
-	LoginForm^ form = gcnew LoginForm();
+	MyForm^ form = gcnew MyForm();
 	form->Show();
 }
 void CurseProject::LibraryForm::Headers()
@@ -181,14 +213,15 @@ void CurseProject::LibraryForm::Headers()
 	HeaderC();
 	HeaderD();
 	HeaderE();
+	HeaderF();
 }
 void CurseProject::LibraryForm::HeaderA_busk()
 {
 	dataGridData->TopLeftHeaderCell->Value = "###";
 	DataGridViewTextBoxColumn^ c1 = gcnew DataGridViewTextBoxColumn();
 	c1->Name = "Список";
-	c1->HeaderText = "Название";
-	c1->Width = 150;
+	c1->HeaderText = "Жанр";
+	c1->Width = 100;
 	dataGridData->Columns->Add(c1);
 
 	dataGridData->AutoResizeColumn(0);
@@ -198,13 +231,23 @@ void CurseProject::LibraryForm::HeaderA()
 {
 	DataGridViewTextBoxColumn^ c2 = gcnew DataGridViewTextBoxColumn();
 	c2->Name = "Список";
+	c2->HeaderText = "Жанр";
+	c2->Width = 100;
+	dataGridData->Columns->Add(c2);
+
+	dataGridData->AutoResizeColumn(0);
+}
+void CurseProject::LibraryForm::HeaderB()
+{
+	DataGridViewTextBoxColumn^ c2 = gcnew DataGridViewTextBoxColumn();
+	c2->Name = "Список";
 	c2->HeaderText = "Название";
 	c2->Width = 150;
 	dataGridData->Columns->Add(c2);
 
 	dataGridData->AutoResizeColumn(0);
 }
-void CurseProject::LibraryForm::HeaderB()
+void CurseProject::LibraryForm::HeaderC()
 {
 	DataGridViewTextBoxColumn^ c5 = gcnew DataGridViewTextBoxColumn();
 	c5->Name = "Список";
@@ -214,7 +257,7 @@ void CurseProject::LibraryForm::HeaderB()
 
 	dataGridData->AutoResizeColumn(0);
 }
-void CurseProject::LibraryForm::HeaderC()
+void CurseProject::LibraryForm::HeaderD()
 {
 	DataGridViewTextBoxColumn^ c3 = gcnew DataGridViewTextBoxColumn();
 	c3->Name = "Список";
@@ -225,15 +268,53 @@ void CurseProject::LibraryForm::HeaderC()
 	dataGridData->AutoResizeColumn(0);
 }
 
-void CurseProject::LibraryForm::HeaderD()
+void CurseProject::LibraryForm::HeaderE()
 {
 	DataGridViewTextBoxColumn^ c4 = gcnew DataGridViewTextBoxColumn();
 	c4->Name = "Список";
-	c4->HeaderText = "Кол-во страниц";
+	c4->HeaderText = "Страницы";
 	c4->Width = 150;
 	dataGridData->Columns->Add(c4);
 
 	dataGridData->AutoResizeColumn(0);
+}
+
+System::Void CurseProject::LibraryForm::button3_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	if (temp->value == 0) MessageBox::Show("Вы не получали книги", "Упсс...");
+	else MessageBox::Show("До даты возврата книг: " + this->temp->value.ToString() + " дней", "Статус");
+}
+
+void CurseProject::LibraryForm::ShowRasskaz()	// отображение ввиде таблицы
+{
+	int temp = 0;
+	Rasskaz_ rasskaz;
+	Object_ object;
+	object.item();
+	dataGridData->ClearSelection();
+	smatch find_world;
+	regex regular(SEARCH_RASSKAZ);
+	std::vector<string> v = object.Print();
+	vector<Ones> ones_v = ReturnCell(v, object.GetCount());
+	for (int i = rasskaz.GetBegin(); i < object.GetCount(); i++)
+	{
+		if (regex_search(v[i], find_world, regular)) {
+			dataGridData->Rows[temp]->HeaderCell->Value = "=>";
+			dataGridData->Columns[0]->HeaderCell->Value = "id";
+			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
+			dataGridData->Rows[temp]->Cells[En_name::Janr]->Value = Convert_string_To_String(ones_v[i].Janr);
+			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
+			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
+			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
+			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages) + " стр.";
+			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
+			dataGridData->AutoResizeColumn(0);
+			dataGridData->AutoResizeRows();
+			temp++;
+		}
+	}
+	dataGridData->AutoResizeColumn(0);
+	dataGridData->AutoResizeRows();
 }
 
 void CurseProject::LibraryForm::Headers_B()
@@ -244,7 +325,7 @@ void CurseProject::LibraryForm::Headers_B()
 	HeaderD();
 	HeaderE();
 }
-void CurseProject::LibraryForm::HeaderE()
+void CurseProject::LibraryForm::HeaderF()
 {
 	DataGridViewTextBoxColumn^ c6 = gcnew DataGridViewTextBoxColumn();
 	c6->Name = "Список";
@@ -253,36 +334,6 @@ void CurseProject::LibraryForm::HeaderE()
 	dataGridData->Columns->Add(c6);
 
 	dataGridData->AutoResizeColumn(0);
-}
-void CurseProject::LibraryForm::ShowPovest()	// отображение ввиде таблицы
-{
-	int temp = 0;
-	Povest_ povest;
-	Object_ object;
-	object.item();
-	dataGridData->ClearSelection();
-	smatch find_world;
-	regex regular(SEARCH_POVEST);
-	std::vector<string> v = object.Print();
-	vector<Ones> ones_v = ReturnCell(v, object.GetCount());
-	for (int i = povest.GetBegin(); i < object.GetCount(); i++)
-	{
-		if (regex_search(v[i], find_world, regular)) {
-			dataGridData->Rows[temp]->HeaderCell->Value = "=>";
-			dataGridData->Columns[0]->HeaderCell->Value = "id";
-			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
-			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year); 
-			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author); 
-			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
-			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
-			dataGridData->AutoResizeColumn(0);
-			dataGridData->AutoResizeRows();
-			temp++;
-		}
-	}
-	dataGridData->AutoResizeColumn(0);
-	dataGridData->AutoResizeRows();
 }
 void CurseProject::LibraryForm::ShowBask()
 {
@@ -296,55 +347,26 @@ void CurseProject::LibraryForm::ShowBask()
 		dataGridData->Rows[temp]->HeaderCell->Value = Convert::ToString(i + 1) + ".";
 		dataGridData->Columns[0]->HeaderCell->Value = "Корзина";
 		dataGridData->Rows[temp]->Cells[NULL]->Value = "##########";
+		dataGridData->Rows[temp]->Cells[En_name::Janr]->Value = Convert_string_To_String(ones_v[i].Janr);
 		dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
 		dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
 		dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
-		dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
+		dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages) + " стр.";
 		dataGridData->AutoResizeColumn(0);
 		dataGridData->AutoResizeRows();
 		temp++;
 	}
 }
-void CurseProject::LibraryForm::ShowStih()
-{
-	int temp = 0;
-	Stih_ stih;
-	Object_ object;
-	object.item();
-	smatch find_world;
-	regex regular(SEARCH_STIH);
-	std::vector<string> v = object.Print();
-	vector<Ones> ones_v = ReturnCell(v, object.GetCount());
-	for (int i = stih.GetBegin(); i < object.GetCount(); i++)
-	{
-		if (regex_search(v[i], find_world, regular)) {
-			dataGridData->Rows[temp]->HeaderCell->Value = "=>";
-			dataGridData->Columns[0]->HeaderCell->Value = "id";
-			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
-			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
-			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
-			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
-			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
-			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
-			dataGridData->AutoResizeColumn(0);
-			dataGridData->AutoResizeRows();
-			temp++;
-		}
-	}
-	dataGridData->AutoResizeColumn(0);
-	dataGridData->AutoResizeRows();
-}
+
 void CurseProject::LibraryForm::ShowRoman()
 {
 	int temp = 0;
 	Roman_ roman;
-	roman.Print();
 	Object_ object;
 	object.item();
-	std::vector<string> v = object.Print();
-	dataGridData->ClearSelection();
 	smatch find_world;
 	regex regular(SEARCH_ROMAN);
+	std::vector<string> v = object.Print();
 	vector<Ones> ones_v = ReturnCell(v, object.GetCount());
 	for (int i = roman.GetBegin(); i < object.GetCount(); i++)
 	{
@@ -352,10 +374,11 @@ void CurseProject::LibraryForm::ShowRoman()
 			dataGridData->Rows[temp]->HeaderCell->Value = "=>";
 			dataGridData->Columns[0]->HeaderCell->Value = "id";
 			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
+			dataGridData->Rows[temp]->Cells[En_name::Janr]->Value = Convert_string_To_String(ones_v[i].Janr);
 			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
 			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
 			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
-			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
+			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages) + " стр.";
 			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
 			dataGridData->AutoResizeColumn(0);
 			dataGridData->AutoResizeRows();
@@ -365,28 +388,30 @@ void CurseProject::LibraryForm::ShowRoman()
 	dataGridData->AutoResizeColumn(0);
 	dataGridData->AutoResizeRows();
 }
-void CurseProject::LibraryForm::ShowRasskaz()
+
+void CurseProject::LibraryForm::ShowPovest()
 {
 	int temp = 0;
-	Rasskaz_ rasskaz;
-	rasskaz.Print();
+	Povest_ povest;
+	povest.Print();
 	Object_ object;
 	object.item();
 	std::vector<string> v = object.Print();
 	dataGridData->ClearSelection();
 	smatch find_world;
-	regex regular(SEARCH_RASSKAZ);
+	regex regular(SEARCH_POVEST);
 	vector<Ones> ones_v = ReturnCell(v, object.GetCount());
-	for (int i = rasskaz.GetBegin(); i < object.GetCount(); i++)
+	for (int i = povest.GetBegin(); i < object.GetCount(); i++)
 	{
 		if (regex_search(v[i], find_world, regular)) {
 			dataGridData->Rows[temp]->HeaderCell->Value = "=>";
 			dataGridData->Columns[0]->HeaderCell->Value = "id";
 			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
+			dataGridData->Rows[temp]->Cells[En_name::Janr]->Value = Convert_string_To_String(ones_v[i].Janr);
 			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
 			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
 			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
-			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
+			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages) + " стр.";
 			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
 			dataGridData->AutoResizeColumn(0);
 			dataGridData->AutoResizeRows();
@@ -396,6 +421,7 @@ void CurseProject::LibraryForm::ShowRasskaz()
 	dataGridData->AutoResizeColumn(0);
 	dataGridData->AutoResizeRows();
 }
+
 void CurseProject::LibraryForm::Show()
 {
 	Object_ object;
@@ -407,12 +433,109 @@ void CurseProject::LibraryForm::Show()
 		dataGridData->Rows[i]->HeaderCell->Value = "=>";
 		dataGridData->Columns[0]->HeaderCell->Value = "id";
 		dataGridData->Rows[i]->Cells[NULL]->Value = Convert::ToString(i + 1);
+		dataGridData->Rows[i]->Cells[En_name::Janr]->Value = Convert_string_To_String(ones_v[i].Janr);
 		dataGridData->Rows[i]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
 		dataGridData->Rows[i]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
 		dataGridData->Rows[i]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
-		dataGridData->Rows[i]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages);
+		dataGridData->Rows[i]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages) + " стр.";
 		dataGridData->Rows[i]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
 		dataGridData->AutoResizeColumn(0);
 		dataGridData->AutoResizeRows();
 	}
+}
+void CurseProject::LibraryForm::ShowStih()
+{
+	int temp = 0;
+	Stih_ stih;
+	stih.Print();
+	Object_ object;
+	object.item();
+	std::vector<string> v = object.Print();
+	dataGridData->ClearSelection();
+	smatch find_world;
+	regex regular(SEARCH_STIH);
+	vector<Ones> ones_v = ReturnCell(v, object.GetCount());
+	for (int i = stih.GetBegin(); i < object.GetCount(); i++)
+	{
+		if (regex_search(v[i], find_world, regular)) {
+			dataGridData->Rows[temp]->HeaderCell->Value = "=>";
+			dataGridData->Columns[0]->HeaderCell->Value = "id";
+			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
+			dataGridData->Rows[temp]->Cells[En_name::Janr]->Value = Convert_string_To_String(ones_v[i].Janr);
+			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
+			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
+			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
+			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages) + " стр.";
+			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
+			dataGridData->AutoResizeColumn(0);
+			dataGridData->AutoResizeRows();
+			temp++;
+		}
+	}
+	dataGridData->AutoResizeColumn(0);
+	dataGridData->AutoResizeRows();
+}
+void CurseProject::LibraryForm::ShowSkazka()
+{
+	int temp = 0;
+	Skazka_ skazka;
+	skazka.Print();
+	Object_ object;
+	object.item();
+	std::vector<string> v = object.Print();
+	dataGridData->ClearSelection();
+	smatch find_world;
+	regex regular(SEARCH_SKAZKA);
+	vector<Ones> ones_v = ReturnCell(v, object.GetCount());
+	for (int i = skazka.GetBegin(); i < object.GetCount(); i++)
+	{
+		if (regex_search(v[i], find_world, regular)) {
+			dataGridData->Rows[temp]->HeaderCell->Value = "=>";
+			dataGridData->Columns[0]->HeaderCell->Value = "id";
+			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
+			dataGridData->Rows[temp]->Cells[En_name::Janr]->Value = Convert_string_To_String(ones_v[i].Janr);
+			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
+			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
+			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
+			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages) + " стр.";
+			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
+			dataGridData->AutoResizeColumn(0);
+			dataGridData->AutoResizeRows();
+			temp++;
+		}
+	}
+	dataGridData->AutoResizeColumn(0);
+	dataGridData->AutoResizeRows();
+}
+void CurseProject::LibraryForm::ShowMyth()
+{
+	int temp = 0;
+	Myth_ myth;
+	myth.Print();
+	Object_ object;
+	object.item();
+	std::vector<string> v = object.Print();
+	dataGridData->ClearSelection();
+	smatch find_world;
+	regex regular(SEARCH_MYTH);
+	vector<Ones> ones_v = ReturnCell(v, object.GetCount());
+	for (int i = myth.GetBegin(); i < object.GetCount(); i++)
+	{
+		if (regex_search(v[i], find_world, regular)) {
+			dataGridData->Rows[temp]->HeaderCell->Value = "=>";
+			dataGridData->Columns[0]->HeaderCell->Value = "id";
+			dataGridData->Rows[temp]->Cells[NULL]->Value = Convert::ToString(i + 1);
+			dataGridData->Rows[temp]->Cells[En_name::Janr]->Value = Convert_string_To_String(ones_v[i].Janr);
+			dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
+			dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
+			dataGridData->Rows[temp]->Cells[En_name::Author]->Value = Convert_string_To_String(ones_v[i].Author);
+			dataGridData->Rows[temp]->Cells[En_name::Pages]->Value = Convert_string_To_String(ones_v[i].Pages) + " стр.";
+			dataGridData->Rows[temp]->Cells[En_name::Ekzemps]->Value = Convert_string_To_String(ones_v[i].Ekzemps) + " экз.";
+			dataGridData->AutoResizeColumn(0);
+			dataGridData->AutoResizeRows();
+			temp++;
+		}
+	}
+	dataGridData->AutoResizeColumn(0);
+	dataGridData->AutoResizeRows();
 }

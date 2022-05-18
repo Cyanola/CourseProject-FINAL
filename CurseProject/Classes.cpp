@@ -205,3 +205,45 @@ std::vector<std::string> Rasskaz_::Print()
 {
 	return Rasskaz_Data;
 }
+Skazka_::Skazka_()
+{
+	bool temp = true;
+	smatch find_world;
+	regex regular(SEARCH_SKAZKA);	// регул€рное выражение
+	for (int i = 0; i < id; i++)
+	{
+		if (regex_search(data[i], find_world, regular)) {
+			if (temp) begin = i;
+			count++;
+			Skazka_Data.push_back(data[i]);
+			end = i;
+			temp = false;
+		}
+	}
+}
+
+std::vector<std::string> Skazka_::Print()
+{
+	return Skazka_Data;
+}
+Myth_::Myth_()
+{
+	bool temp = true;
+	smatch find_world;
+	regex regular(SEARCH_MYTH);	// регул€рное выражение
+	for (int i = 0; i < id; i++)
+	{
+		if (regex_search(data[i], find_world, regular)) {
+			if (temp) begin = i;
+			count++;
+			Myth_Data.push_back(data[i]);
+			end = i;
+			temp = false;
+		}
+	}
+}
+
+std::vector<std::string> Myth_::Print()
+{
+	return Myth_Data;
+}

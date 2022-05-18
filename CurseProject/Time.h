@@ -3,12 +3,12 @@ using namespace System;
 using namespace System::Threading;
 using namespace System::Windows::Forms;
 using namespace System::Threading::Tasks;
-
+#include "LibraryForm.h"
+#include "MyForm.h"
 public ref struct Temp
 {
 	property System::Int32 value;
 	property System::Guid order_id;
-
 	Guid D(void)
 	{
 		Console::WriteLine("Start");
@@ -26,6 +26,5 @@ public ref struct Temp
 		this->value = 0;
 		this->order_id = System::Guid::Empty;
 	}
-
-	Temp(System::Void) { value = 0; order_id = System::Guid::Empty; }
+	Temp(System::Void) { value = 0; order_id = System::Guid::Empty;	}
 };

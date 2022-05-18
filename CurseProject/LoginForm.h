@@ -67,6 +67,7 @@ namespace CurseProject {
 			// 
 			// ChitatelButton
 			// 
+			this->ChitatelButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ChitatelButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->ChitatelButton->Location = System::Drawing::Point(54, 95);
@@ -79,6 +80,7 @@ namespace CurseProject {
 			// 
 			// AdminButton
 			// 
+			this->AdminButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->AdminButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->AdminButton->Location = System::Drawing::Point(54, 174);
@@ -104,7 +106,6 @@ namespace CurseProject {
 			this->Text = L"¬ход";
 			this->Load += gcnew System::EventHandler(this, &LoginForm::LoginForm_Load);
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion

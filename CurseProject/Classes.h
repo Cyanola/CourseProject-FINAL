@@ -12,29 +12,33 @@ using namespace std;
 #define FILE_BASKET_NAME "Basket.txt"		//
 #define FILE_NAME "Data.txt"				// Имена Файлов
 #define FILE_MAIN_NAME "DefaultData.txt"
-#define SEARCH_EXP_NEW R"(\w{2,30}\s\w{2,10}\s\d{4}\s\w{3,15}\s\d{2,5}\s\d{1})" //Общее регулярное выражение
-#define SEARCH_POVEST R"((Повесть)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,5}\s\d{1})" // Регулярное выражение для повестей
-#define SEARCH_STIH R"((Стихотворение)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для стихотворений
-#define SEARCH_ROMAN R"((Роман)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,5}\s\d{1})" // Регулярное выражение для романов
-#define SEARCH_RASSKAZ R"((Рассказ)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,5}\s\d{1})" // Регулярное выражение для рассказов
-#define BITSTRING R"((\w{2,35}\s)|(\d{1})|(\d{2,5}))"
-#define SPACE R"(^\s)"
+#define SEARCH_EXP_NEW R"(\w{2,17}\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" //Общее регулярное выражение
+#define SEARCH_POVEST R"((Povest)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Повести
+#define SEARCH_ROMAN R"((Roman)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Романы
+#define SEARCH_RASSKAZ R"((Rasskaz)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Рассказы
+#define SEARCH_STIH R"((Stihotvorenie)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Рассказы
+#define SEARCH_MYTH R"((Myth)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Рассказы
+#define SEARCH_SKAZKA R"((Skazka)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Рассказы
+
+#define BITSTRING R"((\w{2,30}\s)|(\w{3,15})|(\d{2,4})|(\d{1}))"
 
 enum En_name
 {
-	Nazvanie = 1,
-	Year = 2,
-	Author = 3,
-	Pages = 4,
-	Ekzemps = 5,
+	Janr = 1,
+	Nazvanie = 2,
+	Year = 3,
+	Author = 4,
+	Pages = 5,
+	Ekzemps = 6,
 };
 
 struct Ones
 {
+	string Janr = "";
 	string Nazvanie = "";
 	string Year = "";
 	string Author = "";
-	string Pages  = "";
+	string Pages = "";
 	string Ekzemps = "";
 };
 
@@ -134,6 +138,30 @@ public:
 	int GetEnd() { return end; }
 protected:
 	vector <string> Rasskaz_Data;
+	int count = 0;
+};
+class Skazka_ : public Object_
+{
+public:
+	Skazka_();
+	std::vector<std::string> Print() override;
+	int GetCount() { return count; }
+	int GetBegin() { return begin; }
+	int GetEnd() { return end; }
+protected:
+	vector <string> Skazka_Data;
+	int count = 0;
+};
+class Myth_ : public Object_
+{
+public:
+	Myth_();
+	std::vector<std::string> Print() override;
+	int GetCount() { return count; }
+	int GetBegin() { return begin; }
+	int GetEnd() { return end; }
+protected:
+	vector <string> Myth_Data;
 	int count = 0;
 };
 std::vector<Ones> ReturnCell(std::vector<std::string> s, int count);
