@@ -2,7 +2,7 @@
 #include "Functions.h"
 using namespace System;
 using namespace System::Threading::Tasks;
-Admin::Admin()
+Librarian::Librarian()
 {
 	ifstream File(FILE_NAME);	// конструктор ворует начальные данные
 	if (File.is_open())
@@ -11,7 +11,7 @@ Admin::Admin()
 		while (!File.eof()) {
 			string temp;	// временна€ переменна€ строчного типа
 			getline(File, temp);
-			this->admin_data.push_back(temp);
+			this->librarian_data.push_back(temp);
 			count++;
 		}
 	}
@@ -20,26 +20,26 @@ Admin::Admin()
 }
 
 
-std::vector<std::string> Admin::Print_Admin_data()
+std::vector<std::string> Librarian::Print_Admin_data()
 {
-	return admin_data;
+	return librarian_data;
 }
 
-Basket_::Basket_()
+Favourites_::Favourites_()
 {
-	ifstream File(FILE_BASKET_NAME);
+	ifstream File(FILE_FAVOURITES_NAME);
 	if (!File.is_open()) throw exception("File read error");
 	while (!File.eof()) {
-		bc++; string temp;	// 
+		fw++; string temp;	// 
 		getline(File, temp);
-		this->bk.push_back(temp);
+		this->fv.push_back(temp);
 	}
 	File.close();
 }
 
-vector <string> Basket_::GetBK()
+vector <string> Favourites_::GetFV()
 {
-	return bk;
+	return fv;
 }
 
 Builder::Builder()
@@ -54,7 +54,7 @@ Builder::Builder()
 	File.close();
 }
 
-void Object_::item()
+void Object_::book()
 {
 	regex regular(SEARCH_EXP_NEW);	// регул€рное выражение
 	smatch find_word;
@@ -70,39 +70,39 @@ void Object_::item()
 	}
 }
 
-void Object_::Basket(int id_)
+void Object_::Favourites(int id_)
 {
-	fstream File(FILE_NAME); fstream File_Basket(FILE_BASKET_NAME, ios_base::app); // открытие файлов
+	fstream File(FILE_NAME); fstream File_Favourites(FILE_FAVOURITES_NAME, ios_base::app); // открытие файлов
 	id_--; // аргумент передаваем в метод класса Object
-	Basket_ basket_; auto valueBasket = basket_.GetBK();
+	Favourites_ favourites_; auto valueFavourites = favourites_.GetFV();
 	string temp; string buff;// временные переменные
 	temp = (data[id_].c_str()[data[id_].size() - 1]);
 	buff = data[id_];
 	int count = stoi(temp); // преобразование из строчного типа в целочисленный
 	if (count == 1) {									// проверка, если товар в одном экземпл€ре,
 		buff.replace(buff.size() - 1, buff.size(), "1");// то удал€ем его из общего списка товаров
-		if (valueBasket[NULL] == "") {
-			File_Basket << buff;
+		if (valueFavourites[NULL] == "") {
+			File_Favourites << buff;
 		}
 		else
 		{
-			File_Basket << endl << buff;
+			File_Favourites << endl << buff;
 		}
 		data.erase(data.begin() + id_);
 	}
 	else {
 		buff.replace(buff.size() - 1, buff.size(), "1");
-		if (valueBasket[NULL] == "") {
-			File_Basket << buff;
+		if (valueFavourites[NULL] == "") {
+			File_Favourites << buff;
 		}
 		else
 		{
-			File_Basket << endl << buff;
+			File_Favourites << endl << buff;
 		} // запись данных в файл "корзина"
 		count--; string temp2 = to_string(count); // преоброзование уменьшенного значени€ в строчный тип
 		this->data[id_].replace(data[id_].size() - 1, data[id_].size(), temp2); // замена в векторе количества товара
 	}
-	File.close(); File_Basket.close(); // закрытие отработанных файлов
+	File.close(); File_Favourites.close(); // закрытие отработанных файлов
 	ofstream File_New(FILE_NAME, ios_base::trunc); // открытие файла в режиме "запись в конец"
 	if (!File_New.is_open()) throw exception("File read error"); // ошибка открыти€ файла
 	for (int i = 0; i < data.size(); i++) {  // запись добавленного предмета в конец "корзины"

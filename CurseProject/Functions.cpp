@@ -1,5 +1,6 @@
 #include "Functions.h"
 #include "Classes.h"
+#include "LibraryForm.h"
 using namespace System;
 
 void SetData()	// Функция возвращение данных в исходный вид
@@ -26,7 +27,7 @@ void ReGroupData()
 {
 	std::vector<std::string> regroup;
 	Object_ obj;
-	obj.item();
+	obj.book();
 	regroup = obj.Print();
 	ofstream File_New(FILE_NAME, ios_base::trunc); // открытие файла в режиме "запись в конец"
 	if (!File_New.is_open()) throw exception("File read error"); // ошибка открытия файла

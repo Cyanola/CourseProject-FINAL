@@ -6,7 +6,7 @@ System::Void CurseProject::AutorizationForm::textBox1_TextChanged(System::Object
 
 System::Void CurseProject::AutorizationForm::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
-    if (textBox1->Text == "OOP1337")
+    if (textBox1->Text == "12345")
     {
        AdminForm^ form3 = gcnew AdminForm();
         form3->Show();

@@ -102,6 +102,7 @@ namespace CurseProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AdminForm6::typeid));
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
@@ -297,6 +298,8 @@ namespace CurseProject {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(464, 288);
 			this->Controls->Add(this->groupBox1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MinimumSize = System::Drawing::Size(482, 335);
 			this->Name = L"AdminForm6";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Вы выбрали добавить: Миф";

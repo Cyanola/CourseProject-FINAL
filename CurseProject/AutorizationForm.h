@@ -56,6 +56,7 @@ namespace CurseProject {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AutorizationForm::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->Backkk = (gcnew System::Windows::Forms::Button());
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
@@ -70,7 +71,7 @@ namespace CurseProject {
 			this->label1->BackColor = System::Drawing::SystemColors::Control;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(63, 9);
+			this->label1->Location = System::Drawing::Point(13, 19);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(215, 29);
@@ -80,10 +81,12 @@ namespace CurseProject {
 			// Backkk
 			// 
 			this->Backkk->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->Backkk->Location = System::Drawing::Point(4, 108);
+			this->Backkk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->Backkk->Location = System::Drawing::Point(13, 97);
 			this->Backkk->Margin = System::Windows::Forms::Padding(4);
 			this->Backkk->Name = L"Backkk";
-			this->Backkk->Size = System::Drawing::Size(100, 28);
+			this->Backkk->Size = System::Drawing::Size(100, 35);
 			this->Backkk->TabIndex = 6;
 			this->Backkk->Text = L"Назад";
 			this->Backkk->UseVisualStyleBackColor = true;
@@ -98,10 +101,12 @@ namespace CurseProject {
 			// button1
 			// 
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button1->Location = System::Drawing::Point(199, 52);
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button1->Location = System::Drawing::Point(128, 97);
 			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(100, 28);
+			this->button1->Size = System::Drawing::Size(100, 35);
 			this->button1->TabIndex = 5;
 			this->button1->Text = L"Вход";
 			this->button1->UseVisualStyleBackColor = true;
@@ -111,12 +116,12 @@ namespace CurseProject {
 			// 
 			this->textBox1->Cursor = System::Windows::Forms::Cursors::Cross;
 			this->textBox1->HideSelection = false;
-			this->textBox1->Location = System::Drawing::Point(44, 52);
+			this->textBox1->Location = System::Drawing::Point(13, 61);
 			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->PasswordChar = '*';
-			this->textBox1->Size = System::Drawing::Size(147, 28);
+			this->textBox1->Size = System::Drawing::Size(215, 28);
 			this->textBox1->TabIndex = 4;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &AutorizationForm::textBox1_TextChanged);
 			// 
@@ -124,13 +129,16 @@ namespace CurseProject {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(335, 138);
+			this->ClientSize = System::Drawing::Size(253, 138);
 			this->Controls->Add(this->Backkk);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(271, 185);
 			this->MinimizeBox = false;
+			this->MinimumSize = System::Drawing::Size(271, 185);
 			this->Name = L"AutorizationForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Авторизация";

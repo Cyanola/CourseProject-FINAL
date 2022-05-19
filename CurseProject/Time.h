@@ -3,8 +3,7 @@ using namespace System;
 using namespace System::Threading;
 using namespace System::Windows::Forms;
 using namespace System::Threading::Tasks;
-#include "LibraryForm.h"
-#include "MyForm.h"
+#include "Functions.h"
 public ref struct Temp
 {
 	property System::Int32 value;
@@ -25,6 +24,7 @@ public ref struct Temp
 		MessageBox::Show("Дата возврата книг:\nСегодня", "Состояние");
 		this->value = 0;
 		this->order_id = System::Guid::Empty;
+		MessageBox::Show("Вернуть книги", "Возврат книг");
 	}
 	Temp(System::Void) { value = 0; order_id = System::Guid::Empty;	}
 };

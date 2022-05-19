@@ -86,6 +86,7 @@ namespace CurseProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AdminForm2::typeid));
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
@@ -276,8 +277,11 @@ namespace CurseProject {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(446, 305);
 			this->Controls->Add(this->groupBox1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(464, 352);
 			this->MinimizeBox = false;
+			this->MinimumSize = System::Drawing::Size(464, 352);
 			this->Name = L"AdminForm2";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Вы выбрали добавить:  Стихотворение";

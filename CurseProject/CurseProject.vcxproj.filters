@@ -16,53 +16,44 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LoginForm.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="AdminForm.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="AutorizationForm.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="LibraryForm.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Файлы заголовков</Filter>
     </ClCompile>
     <ClCompile Include="Functions.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Файлы заголовков</Filter>
     </ClCompile>
     <ClCompile Include="Classes.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Файлы заголовков</Filter>
     </ClCompile>
-    <ClCompile Include="MyForm.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="LibraryForm.cpp">
+      <Filter>Файлы заголовков</Filter>
     </ClCompile>
-    <ClCompile Include="AdminForm3.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="AdminForm4.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="AdminForm1.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="AdminForm2.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="AdminForm5.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="AutorizationForm.cpp">
+      <Filter>Файлы заголовков</Filter>
     </ClCompile>
     <ClCompile Include="AdminForm6.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Файлы заголовков</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminForm5.cpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminForm4.cpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminForm3.cpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminForm2.cpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminForm1.cpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminForm.cpp">
+      <Filter>Файлы заголовков</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LoginForm.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Functions.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="AdminForm.h">
@@ -72,12 +63,6 @@
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="LibraryForm.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Time.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="MyForm.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="AdminForm3.h">
@@ -98,9 +83,18 @@
     <ClInclude Include="AdminForm6.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Basket.txt">
+    <Text Include="Favourites.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
     <Text Include="DefaultData.txt">

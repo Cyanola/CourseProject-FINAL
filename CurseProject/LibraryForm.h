@@ -47,8 +47,8 @@ namespace CurseProject {
 
 
 
-	private: System::Windows::Forms::GroupBox^ groupBox1;
-	private: System::Windows::Forms::DataGridView^ dataGridData;
+
+
 
 	private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^ оПрограммеToolStripMenuItem;
@@ -63,6 +63,9 @@ namespace CurseProject {
 	private: System::Windows::Forms::Button^ Stih;
 	private: System::Windows::Forms::Button^ Myth;
 	private: System::Windows::Forms::Button^ Skazka;
+	private: System::Windows::Forms::DataGridView^ dataGridData;
+	private: System::Windows::Forms::GroupBox^ groupBox1;
+
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -83,13 +86,12 @@ namespace CurseProject {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LibraryForm::typeid));
 			this->colorDialog1 = (gcnew System::Windows::Forms::ColorDialog());
 			this->ALL = (gcnew System::Windows::Forms::Button());
 			this->Povest = (gcnew System::Windows::Forms::Button());
 			this->Roman = (gcnew System::Windows::Forms::Button());
 			this->Rasskaz = (gcnew System::Windows::Forms::Button());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->dataGridData = (gcnew System::Windows::Forms::DataGridView());
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->оПрограммеToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -100,9 +102,10 @@ namespace CurseProject {
 			this->Stih = (gcnew System::Windows::Forms::Button());
 			this->Myth = (gcnew System::Windows::Forms::Button());
 			this->Skazka = (gcnew System::Windows::Forms::Button());
-			this->groupBox1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridData))->BeginInit();
+			this->dataGridData = (gcnew System::Windows::Forms::DataGridView());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->contextMenuStrip1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridData))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// ALL
@@ -154,43 +157,6 @@ namespace CurseProject {
 			this->Rasskaz->UseVisualStyleBackColor = true;
 			this->Rasskaz->Click += gcnew System::EventHandler(this, &LibraryForm::Rasskaz_Click);
 			// 
-			// groupBox1
-			// 
-			this->groupBox1->BackColor = System::Drawing::SystemColors::Control;
-			this->groupBox1->Controls->Add(this->dataGridData);
-			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->groupBox1->Location = System::Drawing::Point(191, 12);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 3, 4, 3);
-			this->groupBox1->Size = System::Drawing::Size(1013, 582);
-			this->groupBox1->TabIndex = 5;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Добавление товара в корзину производится по уникальному номеру (id)";
-			// 
-			// dataGridData
-			// 
-			this->dataGridData->AllowUserToAddRows = false;
-			this->dataGridData->AllowUserToDeleteRows = false;
-			this->dataGridData->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->dataGridData->BackgroundColor = System::Drawing::Color::Honeydew;
-			this->dataGridData->CausesValidation = false;
-			this->dataGridData->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
-			this->dataGridData->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridData->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->dataGridData->Location = System::Drawing::Point(7, 39);
-			this->dataGridData->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
-			this->dataGridData->MinimumSize = System::Drawing::Size(58, 0);
-			this->dataGridData->MultiSelect = false;
-			this->dataGridData->Name = L"dataGridData";
-			this->dataGridData->ReadOnly = true;
-			this->dataGridData->RowHeadersWidth = 55;
-			this->dataGridData->RowTemplate->DividerHeight = 1;
-			this->dataGridData->Size = System::Drawing::Size(998, 537);
-			this->dataGridData->TabIndex = 6;
-			this->dataGridData->DoubleClick += gcnew System::EventHandler(this, &LibraryForm::Bask_Click);
-			// 
 			// contextMenuStrip1
 			// 
 			this->contextMenuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
@@ -218,20 +184,20 @@ namespace CurseProject {
 			this->butbask->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->butbask->Location = System::Drawing::Point(12, 358);
 			this->butbask->Name = L"butbask";
-			this->butbask->Size = System::Drawing::Size(139, 37);
+			this->butbask->Size = System::Drawing::Size(139, 50);
 			this->butbask->TabIndex = 10;
-			this->butbask->Text = L"Корзина";
+			this->butbask->Text = L"Избранное";
 			this->butbask->UseVisualStyleBackColor = true;
-			this->butbask->Click += gcnew System::EventHandler(this, &LibraryForm::butbask_Click);
+			this->butbask->Click += gcnew System::EventHandler(this, &LibraryForm::butfav_Click);
 			// 
 			// button2
 			// 
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button2->Location = System::Drawing::Point(14, 401);
+			this->button2->Location = System::Drawing::Point(14, 414);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(139, 39);
 			this->button2->TabIndex = 7;
-			this->button2->Text = L"Оформить Заказ";
+			this->button2->Text = L"Получить книги";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &LibraryForm::button2_Click);
 			// 
@@ -249,11 +215,11 @@ namespace CurseProject {
 			// button3
 			// 
 			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button3->Location = System::Drawing::Point(14, 452);
+			this->button3->Location = System::Drawing::Point(12, 463);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(139, 40);
+			this->button3->Size = System::Drawing::Size(139, 49);
 			this->button3->TabIndex = 12;
-			this->button3->Text = L"Проверить статус Вашего заказа";
+			this->button3->Text = L"Узнать дату возврата книг\r\n\r\n";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &LibraryForm::button3_Click);
 			// 
@@ -293,13 +259,52 @@ namespace CurseProject {
 			this->Skazka->UseVisualStyleBackColor = true;
 			this->Skazka->Click += gcnew System::EventHandler(this, &LibraryForm::Skazka_Click);
 			// 
+			// dataGridData
+			// 
+			this->dataGridData->AllowUserToAddRows = false;
+			this->dataGridData->AllowUserToDeleteRows = false;
+			this->dataGridData->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->dataGridData->BackgroundColor = System::Drawing::Color::Linen;
+			this->dataGridData->CausesValidation = false;
+			this->dataGridData->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+			this->dataGridData->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridData->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->dataGridData->Location = System::Drawing::Point(191, 53);
+			this->dataGridData->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->dataGridData->MinimumSize = System::Drawing::Size(58, 0);
+			this->dataGridData->MultiSelect = false;
+			this->dataGridData->Name = L"dataGridData";
+			this->dataGridData->ReadOnly = true;
+			this->dataGridData->RowHeadersWidth = 55;
+			this->dataGridData->RowTemplate->DividerHeight = 1;
+			this->dataGridData->Size = System::Drawing::Size(1013, 541);
+			this->dataGridData->TabIndex = 6;
+			this->dataGridData->DoubleClick += gcnew System::EventHandler(this, &LibraryForm::Fav_Click);
+			// 
+			// groupBox1
+			// 
+			this->groupBox1->BackColor = System::Drawing::SystemColors::Control;
+			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->groupBox1->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->groupBox1->Location = System::Drawing::Point(191, 12);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->groupBox1->Size = System::Drawing::Size(1013, 582);
+			this->groupBox1->TabIndex = 5;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"Добавление книги в избранное производится по уникальному номеру (id)";
+			// 
 			// LibraryForm
 			// 
 			this->AccessibleRole = System::Windows::Forms::AccessibleRole::None;
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 18);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1257, 648);
+			this->Controls->Add(this->dataGridData);
 			this->Controls->Add(this->Myth);
 			this->Controls->Add(this->Skazka);
 			this->Controls->Add(this->button3);
@@ -315,17 +320,17 @@ namespace CurseProject {
 			this->Controls->Add(this->groupBox1);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->MaximizeBox = false;
 			this->MaximumSize = System::Drawing::Size(1275, 695);
 			this->MinimumSize = System::Drawing::Size(1275, 695);
 			this->Name = L"LibraryForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Библиотека";
+			this->Text = L"Библиотека \"Счастливый читатель\"";
 			this->Load += gcnew System::EventHandler(this, &LibraryForm::LibraryForm_Load);
-			this->groupBox1->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridData))->EndInit();
 			this->contextMenuStrip1->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridData))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -356,9 +361,9 @@ namespace CurseProject {
 		   private: void ShowStih();
 				  private: void ShowMyth();
 						 private: void ShowSkazka();
-	private: void ShowBask();
-	private: System::Void butbask_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void Bask_Click(System::Object^ sender, System::EventArgs^ e);
+	private: void ShowFav();
+	private: System::Void butfav_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void Fav_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
 		   void Headers();

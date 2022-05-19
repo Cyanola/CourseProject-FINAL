@@ -17,7 +17,7 @@ System::Void CurseProject::AdminForm::ShowA_Click(System::Object^ sender, System
 
 void CurseProject::AdminForm::ShowAdmin()
 {
-	Admin admin;
+	Librarian admin;
 	std::vector<std::string> v;
 	v = admin.Print_Admin_data();
 	int temp = 0;
@@ -25,8 +25,8 @@ void CurseProject::AdminForm::ShowAdmin()
 	for (int i = 0; i < v.size(); i++)
 	{
 		dataGridView1->Rows[temp]->HeaderCell->Value = Convert::ToString(i + 1);
-		dataGridView1->Columns[0]->HeaderCell->Value = "####";
-		dataGridView1->Rows[temp]->Cells[0]->Value = "--->";
+		dataGridView1->Columns[0]->HeaderCell->Value = "###";
+		dataGridView1->Rows[temp]->Cells[0]->Value = "-->";
 		dataGridView1->Rows[temp]->Cells[1]->Value = Convert_string_To_String(v[i]);
 		temp++;
 	}
@@ -38,7 +38,7 @@ Void CurseProject::AdminForm::HeaderAdmin()
 {
 	DataGridViewTextBoxColumn^ c1 = gcnew DataGridViewTextBoxColumn();
 	c1->Name = "Список";
-	c1->HeaderText = "Only Admin view";
+	c1->HeaderText = "Librarian View";
 	c1->Width = 150;
 	dataGridView1->Columns->Add(c1);
 
@@ -91,30 +91,9 @@ System::Void CurseProject::AdminForm::Myth_Click(System::Object^ sender, System:
 	form6->ShowDialog();
 }
 
-System::Void CurseProject::AdminForm::delete__Click_1(System::Object^ sender, System::EventArgs^ e)
-{
-	Admin admin;
-	auto v = admin.Print_Admin_data();
-	int ask = Convert::ToInt16(numericUpDown1->Text);
-	ask--;
-	if (ask > (v.size() - 1) || v[0] == "") MessageBox::Show("Индекс находится вне диапазона", "Ошибка");
-	else
-	{
-		v.erase(v.begin() + ask);
-		ofstream File(FILE_MAIN_NAME, ios_base::trunc);
-		for (int i = 0; i < v.size(); i++)
-		{
-			if (v.size() - 1 == i) File << v[i];
-			else File << v[i] << endl;
-		}
-		File.close();
-	}
-	Show_Admin_retry();
-}
-
 void CurseProject::AdminForm::Show_Admin_retry()
 {
-	Admin ad;
+	Librarian ad;
 	dataGridView1->Rows->Clear();
 	dataGridView1->Columns->Clear();
 	dataGridView1->RowCount = ad.GetCount();

@@ -102,6 +102,7 @@ namespace CurseProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AdminForm1::typeid));
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
@@ -290,6 +291,9 @@ namespace CurseProject {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(445, 291);
 			this->Controls->Add(this->groupBox1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximumSize = System::Drawing::Size(463, 338);
+			this->MinimumSize = System::Drawing::Size(463, 338);
 			this->Name = L"AdminForm1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Вы выбрали добавить: Повесть";

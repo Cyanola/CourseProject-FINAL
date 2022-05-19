@@ -2,7 +2,6 @@
 #include "Classes.h"
 #include "Functions.h"
 #include "LoginForm.h"
-#include "MyForm.h"
 using namespace System::Windows::Forms;
 using namespace System::Threading;
 using namespace System::Threading::Tasks;
@@ -11,7 +10,7 @@ System::Void CurseProject::LibraryForm::ALL_Click(System::Object^ sender, System
 {
 	dataGridData->Rows->Clear();
 	dataGridData->Columns->Clear();
-	Object_ obj; auto v = obj.Print(); obj.item();
+	Object_ obj; auto v = obj.Print(); obj.book();
 	dataGridData->RowCount = obj.GetCount();
 	if (v[NULL] == "") {
 		MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс...");
@@ -114,46 +113,46 @@ System::Void CurseProject::LibraryForm::Rasskaz_Click(System::Object^ sender, Sy
 	}
 }
 
-System::Void CurseProject::LibraryForm::butbask_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void CurseProject::LibraryForm::butfav_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	Basket_ basket; auto valuebasket_temp = basket.GetBK();
-	if (valuebasket_temp[NULL] == "") { MessageBox::Show("Ваша корзина пуста", "Упс..."); }
+	Favourites_ favourites; auto valuefavourites_temp = favourites.GetFV();
+	if (valuefavourites_temp[NULL] == "") { MessageBox::Show("Раздел Избранное пуст", "Упс..."); }
 	else
 	{
 
 		dataGridData->Rows->Clear();
 		dataGridData->Columns->Clear();
-		dataGridData->RowCount = basket.GetBC();
+		dataGridData->RowCount = favourites.GetFW();
 		Headers_B();
-		ShowBask();
+		ShowFav();
 	}
 }
 
-System::Void CurseProject::LibraryForm::Bask_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void CurseProject::LibraryForm::Fav_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	Basket_ basket; Object_ object; vector<string> vector_items;
+	Favourites_ fav; Object_ object; vector<string> vector_books;
 	String^ temp_current_Cell;
-	int ask; object.item();
-	vector_items = object.Print();
+	int ask; object.book();
+	vector_books = object.Print();
 	////
-	if (vector_items.empty())
+	if (vector_books.empty())
 	{
 		dataGridData->Rows->Clear();
 		dataGridData->Columns->Clear();
 	}
 	else {
-		object.item();
+		object.book();
 		temp_current_Cell = dataGridData->CurrentCell->Value->ToString();
 		try {
 			ask = Convert::ToInt16(temp_current_Cell);
-			if ((ask > object.GetCount()) || (vector_items[NULL] == "")) { MessageBox::Show("Индекс не принадлежит диапазону", "Упс"); }
+			if ((ask > object.GetCount()) || (vector_books[NULL] == "")) { MessageBox::Show("Индекс не принадлежит диапазону", "Упс"); }
 			else {
-				object.Basket(ask);
+				object.Favourites(ask);
 				dataGridData->Rows->Clear();
 				dataGridData->Columns->Clear();
 				dataGridData->RowCount = object.GetCount();
-				vector_items = object.Print();
-				if (!vector_items.empty()) {
+				vector_books = object.Print();
+				if (!vector_books.empty()) {
 					Headers();
 					Show();
 				}
@@ -173,9 +172,9 @@ System::Void CurseProject::LibraryForm::Bask_Click(System::Object^ sender, Syste
 
 System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, System::EventArgs^ e) // заказ
 {
-	Basket_ basket_name;
-	auto basket_temp_name = basket_name.GetBK();
-	if (basket_temp_name[NULL] == "") MessageBox::Show("Вы не выбрали книги", "Упс...");
+	Favourites_ favourites_name;
+	auto favourites_temp_name = favourites_name.GetFV();
+	if (favourites_temp_name[NULL] == "") MessageBox::Show("Вы не выбрали книги", "Упс...");
 	else
 	{
 		
@@ -189,7 +188,8 @@ System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, Sy
 		thread->ContinueWith(gcnew Action<Task<Guid>^>(temp, &Temp::B));
 		thread->Start();
 		// поток доставки
-		fstream File(FILE_BASKET_NAME, ios::out);
+
+		fstream File(FILE_FAVOURITES_NAME, ios::out);
 		DateTime date1 = DateTime::Today;
 		DateTime answer = date1.AddDays(day);
 		int day_temp = Convert::ToInt16(date1.Day) + day;
@@ -203,7 +203,7 @@ System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, Sy
 System::Void CurseProject::LibraryForm::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	Form::Hide();
-	MyForm^ form = gcnew MyForm();
+	LoginForm^ form = gcnew LoginForm();
 	form->Show();
 }
 void CurseProject::LibraryForm::Headers()
@@ -290,7 +290,7 @@ void CurseProject::LibraryForm::ShowRasskaz()	// отображение ввиде таблицы
 	int temp = 0;
 	Rasskaz_ rasskaz;
 	Object_ object;
-	object.item();
+	object.book();
 	dataGridData->ClearSelection();
 	smatch find_world;
 	regex regular(SEARCH_RASSKAZ);
@@ -335,18 +335,18 @@ void CurseProject::LibraryForm::HeaderF()
 
 	dataGridData->AutoResizeColumn(0);
 }
-void CurseProject::LibraryForm::ShowBask()
+void CurseProject::LibraryForm::ShowFav()
 {
 	int temp = 0;
-	Basket_ basket;
-	std::vector<string> v = basket.GetBK();
+	Favourites_ favourites;
+	std::vector<string> v = favourites.GetFV();
 	dataGridData->ClearSelection();
-	vector<Ones> ones_v = ReturnCell(v, basket.GetBC());
-	for (int i = 0; i < basket.GetBC(); i++)
+	vector<Ones> ones_v = ReturnCell(v, favourites.GetFW());
+	for (int i = 0; i < favourites.GetFW(); i++)
 	{
 		dataGridData->Rows[temp]->HeaderCell->Value = Convert::ToString(i + 1) + ".";
-		dataGridData->Columns[0]->HeaderCell->Value = "Корзина";
-		dataGridData->Rows[temp]->Cells[NULL]->Value = "##########";
+		dataGridData->Columns[0]->HeaderCell->Value = "Избранное";
+		dataGridData->Rows[temp]->Cells[NULL]->Value = "###";
 		dataGridData->Rows[temp]->Cells[En_name::Janr]->Value = Convert_string_To_String(ones_v[i].Janr);
 		dataGridData->Rows[temp]->Cells[En_name::Nazvanie]->Value = Convert_string_To_String(ones_v[i].Nazvanie);
 		dataGridData->Rows[temp]->Cells[En_name::Year]->Value = Convert_string_To_String(ones_v[i].Year);
@@ -363,7 +363,7 @@ void CurseProject::LibraryForm::ShowRoman()
 	int temp = 0;
 	Roman_ roman;
 	Object_ object;
-	object.item();
+	object.book();
 	smatch find_world;
 	regex regular(SEARCH_ROMAN);
 	std::vector<string> v = object.Print();
@@ -395,7 +395,7 @@ void CurseProject::LibraryForm::ShowPovest()
 	Povest_ povest;
 	povest.Print();
 	Object_ object;
-	object.item();
+	object.book();
 	std::vector<string> v = object.Print();
 	dataGridData->ClearSelection();
 	smatch find_world;
@@ -425,7 +425,7 @@ void CurseProject::LibraryForm::ShowPovest()
 void CurseProject::LibraryForm::Show()
 {
 	Object_ object;
-	object.item();
+	object.book();
 	auto v = object.Print();
 	vector<Ones> ones_v = ReturnCell(v, object.GetCount());
 	for (int i = 0; i < object.GetCount(); i++)
@@ -449,7 +449,7 @@ void CurseProject::LibraryForm::ShowStih()
 	Stih_ stih;
 	stih.Print();
 	Object_ object;
-	object.item();
+	object.book();
 	std::vector<string> v = object.Print();
 	dataGridData->ClearSelection();
 	smatch find_world;
@@ -481,7 +481,7 @@ void CurseProject::LibraryForm::ShowSkazka()
 	Skazka_ skazka;
 	skazka.Print();
 	Object_ object;
-	object.item();
+	object.book();
 	std::vector<string> v = object.Print();
 	dataGridData->ClearSelection();
 	smatch find_world;
@@ -513,7 +513,7 @@ void CurseProject::LibraryForm::ShowMyth()
 	Myth_ myth;
 	myth.Print();
 	Object_ object;
-	object.item();
+	object.book();
 	std::vector<string> v = object.Print();
 	dataGridData->ClearSelection();
 	smatch find_world;

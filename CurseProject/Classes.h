@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <ctime>
 using namespace std;
-#define FILE_BASKET_NAME "Basket.txt"		//
+#define FILE_FAVOURITES_NAME "Favourites.txt"		//
 #define FILE_NAME "Data.txt"				// »мена ‘айлов
 #define FILE_MAIN_NAME "DefaultData.txt"
 #define SEARCH_EXP_NEW R"(\w{2,17}\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" //ќбщее регул€рное выражение
@@ -42,22 +42,22 @@ struct Ones
 	string Ekzemps = "";
 };
 
-class Admin
+class Librarian
 {
 public:
-	Admin();
+	Librarian();
 	vector<string> Print_Admin_data();
 	string GetPassword() { return Password; };
 	int GetCount() { return count; }
 private:
 	const string Password = "OOP1337";
-	vector <string> admin_data;
+	vector <string> librarian_data;
 	int count = 0;
 };
 class Builder
 {
 public:
-	void virtual item() = 0;
+	void virtual book() = 0;
 	std::vector<std::string> virtual Print() = 0;
 	Builder();
 protected:
@@ -65,21 +65,21 @@ protected:
 	int id = 0;
 };
 
-class Basket_
+class Favourites_
 {
 public:
-	Basket_();
-	vector <string> GetBK();
-	int GetBC() { return bc; }
+	Favourites_();
+	vector <string> GetFV();
+	int GetFW() { return fw; }
 private:
-	int bc = 0; // basket count
-	vector <string> bk; // basket ko
+	int fw = 0; // basket count
+	vector <string> fv; // basket ko
 };
 class Object_ : public Builder
 {
 public:
-	void item() override;
-	void Basket(int id_);
+	void book() override;
+	void Favourites(int id_);
 	std::vector<std::string> Print() override;
 	int GetCount() { return count; }
 	int GetBegin() { return begin; }

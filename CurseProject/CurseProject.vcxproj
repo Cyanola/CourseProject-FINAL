@@ -132,7 +132,6 @@
     <ClCompile Include="AdminForm.cpp" />
     <ClCompile Include="AutorizationForm.cpp" />
     <ClCompile Include="LibraryForm.cpp" />
-    <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdminForm1.h">
@@ -165,9 +164,6 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="LibraryForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Time.h" />
@@ -204,12 +200,9 @@
     <EmbeddedResource Include="LibraryForm.resx">
       <DependentUpon>LibraryForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Basket.txt" />
+    <Text Include="Favourites.txt" />
     <Text Include="Data.txt" />
     <Text Include="DefaultData.txt" />
   </ItemGroup>
