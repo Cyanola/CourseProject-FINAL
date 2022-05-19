@@ -177,8 +177,8 @@ System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, Sy
 	if (favourites_temp_name[NULL] == "") MessageBox::Show("Вы не выбрали книги", "Упс...");
 	else
 	{
-		
 		srand(time(NULL));
+
 		int day = 1 + rand() % 30;
 		this->temp = gcnew Temp();
 		this->temp->order_id = Guid::NewGuid();
@@ -189,7 +189,7 @@ System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, Sy
 		thread->Start();
 		// поток доставки
 
-		fstream File(FILE_FAVOURITES_NAME, ios::out);
+	fstream File(FILE_FAVOURITES_NAME, ios::out);
 		DateTime date1 = DateTime::Today;
 		DateTime answer = date1.AddDays(day);
 		int day_temp = Convert::ToInt16(date1.Day) + day;

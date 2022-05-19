@@ -148,7 +148,7 @@ namespace CurseProject {
 			// Rasskaz
 			// 
 			this->Rasskaz->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->Rasskaz->Location = System::Drawing::Point(14, 185);
+			this->Rasskaz->Location = System::Drawing::Point(14, 188);
 			this->Rasskaz->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Rasskaz->Name = L"Rasskaz";
 			this->Rasskaz->Size = System::Drawing::Size(139, 37);
@@ -182,9 +182,9 @@ namespace CurseProject {
 			// butbask
 			// 
 			this->butbask->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->butbask->Location = System::Drawing::Point(12, 358);
+			this->butbask->Location = System::Drawing::Point(12, 372);
 			this->butbask->Name = L"butbask";
-			this->butbask->Size = System::Drawing::Size(139, 50);
+			this->butbask->Size = System::Drawing::Size(139, 39);
 			this->butbask->TabIndex = 10;
 			this->butbask->Text = L"Избранное";
 			this->butbask->UseVisualStyleBackColor = true;
@@ -193,7 +193,7 @@ namespace CurseProject {
 			// button2
 			// 
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button2->Location = System::Drawing::Point(14, 414);
+			this->button2->Location = System::Drawing::Point(12, 419);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(139, 39);
 			this->button2->TabIndex = 7;
@@ -215,7 +215,7 @@ namespace CurseProject {
 			// button3
 			// 
 			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button3->Location = System::Drawing::Point(12, 463);
+			this->button3->Location = System::Drawing::Point(12, 465);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(139, 49);
 			this->button3->TabIndex = 12;
@@ -226,7 +226,7 @@ namespace CurseProject {
 			// Stih
 			// 
 			this->Stih->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->Stih->Location = System::Drawing::Point(14, 228);
+			this->Stih->Location = System::Drawing::Point(14, 234);
 			this->Stih->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Stih->Name = L"Stih";
 			this->Stih->Size = System::Drawing::Size(139, 37);
@@ -238,7 +238,7 @@ namespace CurseProject {
 			// Myth
 			// 
 			this->Myth->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->Myth->Location = System::Drawing::Point(14, 315);
+			this->Myth->Location = System::Drawing::Point(14, 326);
 			this->Myth->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Myth->Name = L"Myth";
 			this->Myth->Size = System::Drawing::Size(139, 37);
@@ -250,7 +250,7 @@ namespace CurseProject {
 			// Skazka
 			// 
 			this->Skazka->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->Skazka->Location = System::Drawing::Point(14, 271);
+			this->Skazka->Location = System::Drawing::Point(14, 280);
 			this->Skazka->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->Skazka->Name = L"Skazka";
 			this->Skazka->Size = System::Drawing::Size(139, 37);

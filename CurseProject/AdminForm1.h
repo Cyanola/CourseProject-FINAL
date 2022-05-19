@@ -123,6 +123,7 @@ namespace CurseProject {
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"groupBox1.BackgroundImage")));
 			this->groupBox1->Controls->Add(this->numericUpDown2);
 			this->groupBox1->Controls->Add(this->numericUpDown1);
 			this->groupBox1->Controls->Add(this->label2);
@@ -136,6 +137,7 @@ namespace CurseProject {
 			this->groupBox1->Controls->Add(this->label7);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
+			this->groupBox1->ForeColor = System::Drawing::Color::Linen;
 			this->groupBox1->Location = System::Drawing::Point(1, 12);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->Size = System::Drawing::Size(466, 304);
@@ -199,6 +201,7 @@ namespace CurseProject {
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
+			this->button1->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->button1->Location = System::Drawing::Point(6, 223);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(433, 47);
@@ -289,6 +292,7 @@ namespace CurseProject {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(445, 291);
 			this->Controls->Add(this->groupBox1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
@@ -297,6 +301,7 @@ namespace CurseProject {
 			this->Name = L"AdminForm1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Вы выбрали добавить: Повесть";
+			this->Load += gcnew System::EventHandler(this, &AdminForm1::AdminForm1_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
@@ -308,5 +313,7 @@ namespace CurseProject {
 #pragma endregion
 		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
 			  
-	};
+	private: System::Void AdminForm1_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }

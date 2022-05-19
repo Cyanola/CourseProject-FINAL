@@ -98,14 +98,14 @@ void Object_::Favourites(int id_)
 		else
 		{
 			File_Favourites << endl << buff;
-		} // запись данных в файл "корзина"
+		} // запись данных в файл "Избранное"
 		count--; string temp2 = to_string(count); // преоброзование уменьшенного значения в строчный тип
 		this->data[id_].replace(data[id_].size() - 1, data[id_].size(), temp2); // замена в векторе количества товара
 	}
 	File.close(); File_Favourites.close(); // закрытие отработанных файлов
 	ofstream File_New(FILE_NAME, ios_base::trunc); // открытие файла в режиме "запись в конец"
 	if (!File_New.is_open()) throw exception("File read error"); // ошибка открытия файла
-	for (int i = 0; i < data.size(); i++) {  // запись добавленного предмета в конец "корзины"
+	for (int i = 0; i < data.size(); i++) {  // запись добавленного предмета в конец "Избранного"
 		if (i == data.size() - 1) File_New << data[i];
 		else File_New << data[i] << endl;
 	}

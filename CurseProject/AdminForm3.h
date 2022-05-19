@@ -107,6 +107,7 @@ namespace CurseProject {
 			// 
 			// groupBox
 			// 
+			this->groupBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"groupBox.BackgroundImage")));
 			this->groupBox->Controls->Add(this->numericUpDown2);
 			this->groupBox->Controls->Add(this->numericUpDown1);
 			this->groupBox->Controls->Add(this->label1);
@@ -120,6 +121,7 @@ namespace CurseProject {
 			this->groupBox->Controls->Add(this->label8);
 			this->groupBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
+			this->groupBox->ForeColor = System::Drawing::Color::Linen;
 			this->groupBox->Location = System::Drawing::Point(2, 12);
 			this->groupBox->Name = L"groupBox";
 			this->groupBox->Size = System::Drawing::Size(466, 282);
@@ -183,6 +185,7 @@ namespace CurseProject {
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
+			this->button2->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->button2->Location = System::Drawing::Point(17, 223);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(428, 53);
@@ -275,6 +278,7 @@ namespace CurseProject {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(448, 292);
 			this->Controls->Add(this->groupBox);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));

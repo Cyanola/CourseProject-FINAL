@@ -8,12 +8,3 @@ Rasskaz Mumu 1854 Turgenev 145 5
 Rasskaz Viy 1835 Gogol 654 7
 Rasskaz Ionych 1898 Chehov 57 9
 Rasskaz Chameleon 1884 Chehov 45 2
-Povest AFSVDFD 1800 AFVGSBFD 50 1
-Povest RFWERTFG 1800 QRFEGRW 50 1
-Povest RFQRFE 1800 EDQFEWGEFQ 50 1
-Povest QFWSGEDHTR 1800 QFGEWSREHDF 50 1
-Rasskaz ERQFEWGERHD 1800 QRFWE 50 1
-Rasskaz E1RQWGE 1800 RQTGEWE 1000 1
-Myth AFSGRFDHF 1800 faegretdry 50 1
-Myth fsgde 1800 wgrethr 250 9
-Skazka wgrhyj 1800 ehtrytu 50 8

@@ -12,15 +12,15 @@ using namespace std;
 #define FILE_FAVOURITES_NAME "Favourites.txt"		//
 #define FILE_NAME "Data.txt"				// Имена Файлов
 #define FILE_MAIN_NAME "DefaultData.txt"
+
 #define SEARCH_EXP_NEW R"(\w{2,17}\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" //Общее регулярное выражение
 #define SEARCH_POVEST R"((Povest)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Повести
 #define SEARCH_ROMAN R"((Roman)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Романы
 #define SEARCH_RASSKAZ R"((Rasskaz)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Рассказы
-#define SEARCH_STIH R"((Stihotvorenie)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Рассказы
-#define SEARCH_MYTH R"((Myth)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Рассказы
-#define SEARCH_SKAZKA R"((Skazka)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Рассказы
-
-#define BITSTRING R"((\w{2,30}\s)|(\w{3,15})|(\d{2,4})|(\d{1}))"
+#define SEARCH_STIH R"((Stihotvorenie)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Стихотворения
+#define SEARCH_MYTH R"((Myth)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Мифы
+#define SEARCH_SKAZKA R"((Skazka)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Сказки
+#define BITSTRING R"((\w{2,30}\s)|(\w{3,15})|(\d{2,4})|(\d{1}))" //Регулярное выражения для разбиения строки на подстроки
 
 enum En_name
 {
@@ -72,8 +72,8 @@ public:
 	vector <string> GetFV();
 	int GetFW() { return fw; }
 private:
-	int fw = 0; // basket count
-	vector <string> fv; // basket ko
+	int fw = 0; // favourites count
+	vector <string> fv; // favourites ko
 };
 class Object_ : public Builder
 {

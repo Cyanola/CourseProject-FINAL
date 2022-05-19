@@ -49,6 +49,8 @@ namespace CurseProject {
 	public: System::Windows::Forms::Label^ label10;
 	public: System::Windows::Forms::Label^ label9;
 	public: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::GroupBox^ groupBox1;
+	public:
 
 	protected:
 
@@ -98,9 +100,11 @@ namespace CurseProject {
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericCount))->BeginInit();
+			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// numericUpDown2
@@ -135,7 +139,7 @@ namespace CurseProject {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label1->Location = System::Drawing::Point(16, 174);
+			this->label1->Location = System::Drawing::Point(17, 174);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(224, 22);
@@ -161,7 +165,7 @@ namespace CurseProject {
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button2->Location = System::Drawing::Point(21, 206);
+			this->button2->Location = System::Drawing::Point(20, 208);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(428, 53);
 			this->button2->TabIndex = 98;
@@ -249,22 +253,37 @@ namespace CurseProject {
 			this->label8->Text = L"Год издания";
 			this->label8->UseWaitCursor = true;
 			// 
+			// groupBox1
+			// 
+			this->groupBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"groupBox1.BackgroundImage")));
+			this->groupBox1->Controls->Add(this->button2);
+			this->groupBox1->Controls->Add(this->label1);
+			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->groupBox1->ForeColor = System::Drawing::Color::Linen;
+			this->groupBox1->Location = System::Drawing::Point(0, 0);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(466, 267);
+			this->groupBox1->TabIndex = 103;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"Добавить книгу";
+			// 
 			// AdminForm4
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(464, 263);
 			this->Controls->Add(this->numericUpDown2);
 			this->Controls->Add(this->numericUpDown1);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->numericCount);
-			this->Controls->Add(this->button2);
 			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label8);
+			this->Controls->Add(this->groupBox1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->MaximumSize = System::Drawing::Size(482, 310);
@@ -276,6 +295,8 @@ namespace CurseProject {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericCount))->EndInit();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
