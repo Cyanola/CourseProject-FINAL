@@ -1,5 +1,5 @@
 #include "AutorizationForm.h"
-#include "AdminForm.h"
+#include "LibrarianForm.h"
 #include "LoginForm.h"
 
 System::Void CurseProject::AutorizationForm::textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e){}
@@ -8,7 +8,7 @@ System::Void CurseProject::AutorizationForm::button1_Click(System::Object^ sende
 {
     if (textBox1->Text == "12345")
     {
-       AdminForm^ form3 = gcnew AdminForm();
+        LibrarianForm^ form3 = gcnew LibrarianForm();
         form3->Show();
         this->Hide();
     }

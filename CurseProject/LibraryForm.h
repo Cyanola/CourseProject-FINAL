@@ -61,7 +61,8 @@ namespace CurseProject {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ Stih;
-	private: System::Windows::Forms::Button^ Myth;
+	private: System::Windows::Forms::Button^ Piesa;
+
 	private: System::Windows::Forms::Button^ Skazka;
 	private: System::Windows::Forms::DataGridView^ dataGridData;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
@@ -100,7 +101,7 @@ namespace CurseProject {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->Stih = (gcnew System::Windows::Forms::Button());
-			this->Myth = (gcnew System::Windows::Forms::Button());
+			this->Piesa = (gcnew System::Windows::Forms::Button());
 			this->Skazka = (gcnew System::Windows::Forms::Button());
 			this->dataGridData = (gcnew System::Windows::Forms::DataGridView());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
@@ -235,17 +236,17 @@ namespace CurseProject {
 			this->Stih->UseVisualStyleBackColor = true;
 			this->Stih->Click += gcnew System::EventHandler(this, &LibraryForm::Stih_Click);
 			// 
-			// Myth
+			// Piesa
 			// 
-			this->Myth->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->Myth->Location = System::Drawing::Point(14, 326);
-			this->Myth->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
-			this->Myth->Name = L"Myth";
-			this->Myth->Size = System::Drawing::Size(139, 37);
-			this->Myth->TabIndex = 14;
-			this->Myth->Text = L"Ìèôû";
-			this->Myth->UseVisualStyleBackColor = true;
-			this->Myth->Click += gcnew System::EventHandler(this, &LibraryForm::Myth_Click);
+			this->Piesa->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->Piesa->Location = System::Drawing::Point(14, 326);
+			this->Piesa->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
+			this->Piesa->Name = L"Piesa";
+			this->Piesa->Size = System::Drawing::Size(139, 37);
+			this->Piesa->TabIndex = 14;
+			this->Piesa->Text = L"Ïüåñû";
+			this->Piesa->UseVisualStyleBackColor = true;
+			this->Piesa->Click += gcnew System::EventHandler(this, &LibraryForm::Piesa_Click);
 			// 
 			// Skazka
 			// 
@@ -305,7 +306,7 @@ namespace CurseProject {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1257, 648);
 			this->Controls->Add(this->dataGridData);
-			this->Controls->Add(this->Myth);
+			this->Controls->Add(this->Piesa);
 			this->Controls->Add(this->Skazka);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->Stih);
@@ -344,7 +345,7 @@ namespace CurseProject {
 
 					private: System::Void Skazka_Click(System::Object^ sender, System::EventArgs^ e);
 
-							private: System::Void Myth_Click(System::Object^ sender, System::EventArgs^ e);
+							private: System::Void Piesa_Click(System::Object^ sender, System::EventArgs^ e);
 
 	private: void Show();
 	private: void HeaderA();
@@ -359,7 +360,7 @@ namespace CurseProject {
 		   void ShowPovest();
 	private: void ShowRasskaz();
 		   private: void ShowStih();
-				  private: void ShowMyth();
+				  private: void ShowPiesa();
 						 private: void ShowSkazka();
 	private: void ShowFav();
 	private: System::Void butfav_Click(System::Object^ sender, System::EventArgs^ e);

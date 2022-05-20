@@ -68,18 +68,18 @@ System::Void CurseProject::LibraryForm::Skazka_Click(System::Object^ sender, Sys
 		ShowSkazka();
 	}
 }
-System::Void CurseProject::LibraryForm::Myth_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void CurseProject::LibraryForm::Piesa_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	dataGridData->Rows->Clear();
 	dataGridData->Columns->Clear();
-	Myth_ myth; Object_ obj; auto v = obj.Print();
-	dataGridData->RowCount = myth.GetCount();
+	Piesa_ piesa; Object_ obj; auto v = obj.Print();
+	dataGridData->RowCount = piesa.GetCount();
 	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
 	else
 	{
 		Headers();
 		dataGridData->AutoResizeRows();
-		ShowMyth();
+		ShowPiesa();
 	}
 }
 
@@ -221,7 +221,7 @@ void CurseProject::LibraryForm::HeaderA_busk()
 	DataGridViewTextBoxColumn^ c1 = gcnew DataGridViewTextBoxColumn();
 	c1->Name = "Список";
 	c1->HeaderText = "Жанр";
-	c1->Width = 100;
+	c1->Width = 50;
 	dataGridData->Columns->Add(c1);
 
 	dataGridData->AutoResizeColumn(0);
@@ -232,7 +232,7 @@ void CurseProject::LibraryForm::HeaderA()
 	DataGridViewTextBoxColumn^ c2 = gcnew DataGridViewTextBoxColumn();
 	c2->Name = "Список";
 	c2->HeaderText = "Жанр";
-	c2->Width = 100;
+	c2->Width = 50;
 	dataGridData->Columns->Add(c2);
 
 	dataGridData->AutoResizeColumn(0);
@@ -507,19 +507,19 @@ void CurseProject::LibraryForm::ShowSkazka()
 	dataGridData->AutoResizeColumn(0);
 	dataGridData->AutoResizeRows();
 }
-void CurseProject::LibraryForm::ShowMyth()
+void CurseProject::LibraryForm::ShowPiesa()
 {
 	int temp = 0;
-	Myth_ myth;
-	myth.Print();
+	Piesa_ piesa;
+	piesa.Print();
 	Object_ object;
 	object.book();
 	std::vector<string> v = object.Print();
 	dataGridData->ClearSelection();
 	smatch find_world;
-	regex regular(SEARCH_MYTH);
+	regex regular(SEARCH_PIESA);
 	vector<Ones> ones_v = ReturnCell(v, object.GetCount());
-	for (int i = myth.GetBegin(); i < object.GetCount(); i++)
+	for (int i = piesa.GetBegin(); i < object.GetCount(); i++)
 	{
 		if (regex_search(v[i], find_world, regular)) {
 			dataGridData->Rows[temp]->HeaderCell->Value = "=>";

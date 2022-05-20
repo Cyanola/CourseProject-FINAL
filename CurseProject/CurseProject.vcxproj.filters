@@ -30,25 +30,25 @@
     <ClCompile Include="AutorizationForm.cpp">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
-    <ClCompile Include="AdminForm6.cpp">
+    <ClCompile Include="LibrarianForm6.cpp">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
-    <ClCompile Include="AdminForm5.cpp">
+    <ClCompile Include="LibrarianForm5.cpp">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
-    <ClCompile Include="AdminForm4.cpp">
+    <ClCompile Include="LibrarianForm4.cpp">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
-    <ClCompile Include="AdminForm3.cpp">
+    <ClCompile Include="LibrarianForm3.cpp">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
-    <ClCompile Include="AdminForm2.cpp">
+    <ClCompile Include="LibrarianForm2.cpp">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
-    <ClCompile Include="AdminForm1.cpp">
+    <ClCompile Include="LibrarianForm1.cpp">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
-    <ClCompile Include="AdminForm.cpp">
+    <ClCompile Include="LibrarianForm.cpp">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,7 +56,7 @@
     <ClInclude Include="LoginForm.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="AdminForm.h">
+    <ClInclude Include="LibrarianForm.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="AutorizationForm.h">
@@ -65,22 +65,22 @@
     <ClInclude Include="LibraryForm.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="AdminForm3.h">
+    <ClInclude Include="LibrarianForm3.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="AdminForm4.h">
+    <ClInclude Include="LibrarianForm4.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="AdminForm1.h">
+    <ClInclude Include="LibrarianForm1.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="AdminForm2.h">
+    <ClInclude Include="LibrarianForm2.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="AdminForm5.h">
+    <ClInclude Include="LibrarianForm5.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="AdminForm6.h">
+    <ClInclude Include="LibrarianForm6.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="Time.h">

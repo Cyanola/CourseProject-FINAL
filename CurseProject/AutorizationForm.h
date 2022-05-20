@@ -69,12 +69,12 @@ namespace CurseProject {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::SystemColors::Control;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(13, 19);
+			this->label1->Location = System::Drawing::Point(22, 32);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(215, 29);
+			this->label1->Size = System::Drawing::Size(175, 25);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"¬ведите пароль";
 			// 
@@ -115,6 +115,8 @@ namespace CurseProject {
 			// textBox1
 			// 
 			this->textBox1->Cursor = System::Windows::Forms::Cursors::Cross;
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->textBox1->HideSelection = false;
 			this->textBox1->Location = System::Drawing::Point(13, 61);
 			this->textBox1->Margin = System::Windows::Forms::Padding(4);
@@ -129,6 +131,7 @@ namespace CurseProject {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(253, 138);
 			this->Controls->Add(this->Backkk);
 			this->Controls->Add(this->button1);
@@ -150,5 +153,6 @@ namespace CurseProject {
 		private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Backkk_Click(System::Object^ sender, System::EventArgs^ e);
-	};
+
+};
 }

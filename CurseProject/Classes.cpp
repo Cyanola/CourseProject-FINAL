@@ -226,24 +226,24 @@ std::vector<std::string> Skazka_::Print()
 {
 	return Skazka_Data;
 }
-Myth_::Myth_()
+Piesa_::Piesa_()
 {
 	bool temp = true;
 	smatch find_world;
-	regex regular(SEARCH_MYTH);	// регул€рное выражение
+	regex regular(SEARCH_PIESA);	// регул€рное выражение
 	for (int i = 0; i < id; i++)
 	{
 		if (regex_search(data[i], find_world, regular)) {
 			if (temp) begin = i;
 			count++;
-			Myth_Data.push_back(data[i]);
+			Piesa_Data.push_back(data[i]);
 			end = i;
 			temp = false;
 		}
 	}
 }
 
-std::vector<std::string> Myth_::Print()
+std::vector<std::string> Piesa_::Print()
 {
-	return Myth_Data;
+	return Piesa_Data;
 }

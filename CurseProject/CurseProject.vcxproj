@@ -120,36 +120,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AdminForm1.cpp" />
-    <ClCompile Include="AdminForm2.cpp" />
-    <ClCompile Include="AdminForm3.cpp" />
-    <ClCompile Include="AdminForm4.cpp" />
-    <ClCompile Include="AdminForm5.cpp" />
-    <ClCompile Include="AdminForm6.cpp" />
+    <ClCompile Include="LibrarianForm1.cpp" />
+    <ClCompile Include="LibrarianForm2.cpp" />
+    <ClCompile Include="LibrarianForm3.cpp" />
+    <ClCompile Include="LibrarianForm4.cpp" />
+    <ClCompile Include="LibrarianForm5.cpp" />
+    <ClCompile Include="LibrarianForm6.cpp" />
     <ClCompile Include="Classes.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="LoginForm.cpp" />
-    <ClCompile Include="AdminForm.cpp" />
+    <ClCompile Include="LibrarianForm.cpp" />
     <ClCompile Include="AutorizationForm.cpp" />
     <ClCompile Include="LibraryForm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AdminForm1.h">
+    <ClInclude Include="LibrarianForm1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="AdminForm2.h">
+    <ClInclude Include="LibrarianForm2.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="AdminForm3.h">
+    <ClInclude Include="LibrarianForm3.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="AdminForm4.h">
+    <ClInclude Include="LibrarianForm4.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="AdminForm5.h">
+    <ClInclude Include="LibrarianForm5.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="AdminForm6.h">
+    <ClInclude Include="LibrarianForm6.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Classes.h" />
@@ -157,7 +157,7 @@
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="AdminForm.h">
+    <ClInclude Include="LibrarianForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="AutorizationForm.h">
@@ -169,29 +169,29 @@
     <ClInclude Include="Time.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AdminForm1.resx">
-      <DependentUpon>AdminForm1.h</DependentUpon>
+    <EmbeddedResource Include="LibrarianForm1.resx">
+      <DependentUpon>LibrarianForm1.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm2.resx">
-      <DependentUpon>AdminForm2.h</DependentUpon>
+    <EmbeddedResource Include="LibrarianForm2.resx">
+      <DependentUpon>LibrarianForm2.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm3.resx">
-      <DependentUpon>AdminForm3.h</DependentUpon>
+    <EmbeddedResource Include="LibrarianForm3.resx">
+      <DependentUpon>LibrarianForm3.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm4.resx">
-      <DependentUpon>AdminForm4.h</DependentUpon>
+    <EmbeddedResource Include="LibrarianForm4.resx">
+      <DependentUpon>LibrarianForm4.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm5.resx">
-      <DependentUpon>AdminForm5.h</DependentUpon>
+    <EmbeddedResource Include="LibrarianForm5.resx">
+      <DependentUpon>LibrarianForm5.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm6.resx">
-      <DependentUpon>AdminForm6.h</DependentUpon>
+    <EmbeddedResource Include="LibrarianForm6.resx">
+      <DependentUpon>LibrarianForm6.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm.resx">
-      <DependentUpon>AdminForm.h</DependentUpon>
+    <EmbeddedResource Include="LibrarianForm.resx">
+      <DependentUpon>LibrarianForm.h</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AutorizationForm.resx">

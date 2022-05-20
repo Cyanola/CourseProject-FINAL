@@ -1,9 +1,9 @@
-#include "AdminForm6.h"
+#include "LibrarianForm6.h"
 #include "Functions.h"
 #include "Classes.h"
-System::Void CurseProject::AdminForm6::button1_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void CurseProject::LibrarianForm6::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	String^ str = "Myth ";
+	String^ str = "Piesa ";
 	str += textBox8->Text->ToString() + " "
 		+ numericUpDown2->Text->ToString() + " "
 		+ textBox6->Text->ToString() + " "

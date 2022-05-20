@@ -1,9 +1,9 @@
-#include "AdminForm5.h"
+#include "LibrarianForm2.h"
 #include "Functions.h"
 #include "Classes.h"
-System::Void CurseProject::AdminForm5::button1_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void CurseProject::LibrarianForm2::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	String^ str = "Skazka ";
+	String^ str = "Stihotvorenie ";
 	str += textBox8->Text->ToString() + " "
 		+ numericUpDown2->Text->ToString() + " "
 		+ textBox6->Text->ToString() + " "
@@ -16,5 +16,3 @@ System::Void CurseProject::AdminForm5::button1_Click(System::Object^ sender, Sys
 	File.close();
 	this->Close();
 }
-
-

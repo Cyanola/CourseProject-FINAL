@@ -18,7 +18,7 @@ using namespace std;
 #define SEARCH_ROMAN R"((Roman)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Романы
 #define SEARCH_RASSKAZ R"((Rasskaz)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Рассказы
 #define SEARCH_STIH R"((Stihotvorenie)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Стихотворения
-#define SEARCH_MYTH R"((Myth)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Мифы
+#define SEARCH_PIESA R"((Piesa)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Мифы
 #define SEARCH_SKAZKA R"((Skazka)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Сказки
 #define BITSTRING R"((\w{2,30}\s)|(\w{3,15})|(\d{2,4})|(\d{1}))" //Регулярное выражения для разбиения строки на подстроки
 
@@ -152,16 +152,16 @@ protected:
 	vector <string> Skazka_Data;
 	int count = 0;
 };
-class Myth_ : public Object_
+class Piesa_ : public Object_
 {
 public:
-	Myth_();
+	Piesa_();
 	std::vector<std::string> Print() override;
 	int GetCount() { return count; }
 	int GetBegin() { return begin; }
 	int GetEnd() { return end; }
 protected:
-	vector <string> Myth_Data;
+	vector <string> Piesa_Data;
 	int count = 0;
 };
 std::vector<Ones> ReturnCell(std::vector<std::string> s, int count);

@@ -1,9 +1,9 @@
-#include "AdminForm4.h"
+#include "LibrarianForm3.h"
 #include "Functions.h"
 #include "Classes.h"
-System::Void CurseProject::AdminForm4::button2_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void CurseProject::LibrarianForm3::button2_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	String^ str = "Rasskaz ";
+	String^ str = "Roman ";
 	str += textBox1->Text->ToString() + " "
 		+ numericUpDown2->Text->ToString() + " "
 		+ textBox4->Text->ToString() + " "
@@ -16,4 +16,3 @@ System::Void CurseProject::AdminForm4::button2_Click(System::Object^ sender, Sys
 	File.close();
 	this->Close();
 }
-

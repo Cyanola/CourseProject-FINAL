@@ -10,12 +10,12 @@ namespace CurseProject {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для AdminForm2
+	/// Сводка для AdminForm1
 	/// </summary>
-	public ref class AdminForm2 : public System::Windows::Forms::Form
+	public ref class LibrarianForm1 : public System::Windows::Forms::Form
 	{
 	public:
-		AdminForm2(void)
+		LibrarianForm1(void)
 		{
 			InitializeComponent();
 			//
@@ -27,13 +27,29 @@ namespace CurseProject {
 		/// <summary>
 		/// Освободить все используемые ресурсы.
 		/// </summary>
-		~AdminForm2()
+		~LibrarianForm1()
 		{
 			if (components)
 			{
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::GroupBox^ groupBox1;
+	protected:
+	private: System::Windows::Forms::NumericUpDown^ numericUpDown2;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDown1;
+	public: System::Windows::Forms::Label^ label2;
+	private:
+	private: System::Windows::Forms::NumericUpDown^ numericUpDown3;
+	public:
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::TextBox^ textBox8;
+	public: System::Windows::Forms::Label^ label4;
+	private:
+	public: System::Windows::Forms::Label^ label5;
+	public: System::Windows::Forms::Label^ label6;
+	public: System::Windows::Forms::Label^ label7;
 
 	protected:
 
@@ -54,24 +70,24 @@ namespace CurseProject {
 
 
 
-	private: System::Windows::Forms::GroupBox^ groupBox1;
-	public:
-	private: System::Windows::Forms::NumericUpDown^ numericUpDown2;
-	private: System::Windows::Forms::NumericUpDown^ numericUpDown1;
-	public: System::Windows::Forms::Label^ label2;
-	private:
-	private: System::Windows::Forms::NumericUpDown^ numericUpDown3;
-	public:
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::TextBox^ textBox6;
 
-	private: System::Windows::Forms::TextBox^ textBox8;
+	public:
+
+
 
 	private:
-	public: System::Windows::Forms::Label^ label4;
-	public: System::Windows::Forms::Label^ label5;
-	public: System::Windows::Forms::Label^ label6;
-	public: System::Windows::Forms::Label^ label7;
+
+	public:
+
+
+
+
+
+	private:
+
+
+
+
 
 	private:
 		/// <summary>
@@ -86,7 +102,7 @@ namespace CurseProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AdminForm2::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LibrarianForm1::typeid));
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
@@ -122,9 +138,9 @@ namespace CurseProject {
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->groupBox1->ForeColor = System::Drawing::Color::Linen;
-			this->groupBox1->Location = System::Drawing::Point(2, 12);
+			this->groupBox1->Location = System::Drawing::Point(1, 12);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(446, 286);
+			this->groupBox1->Size = System::Drawing::Size(466, 304);
 			this->groupBox1->TabIndex = 90;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Добавить книгу";
@@ -159,7 +175,7 @@ namespace CurseProject {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label2->Location = System::Drawing::Point(7, 193);
+			this->label2->Location = System::Drawing::Point(7, 187);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(224, 22);
@@ -169,14 +185,14 @@ namespace CurseProject {
 			// 
 			// numericUpDown3
 			// 
-			this->numericUpDown3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numericUpDown3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->numericUpDown3->Location = System::Drawing::Point(256, 189);
 			this->numericUpDown3->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 9, 0, 0, 0 });
 			this->numericUpDown3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericUpDown3->Name = L"numericUpDown3";
-			this->numericUpDown3->Size = System::Drawing::Size(183, 24);
+			this->numericUpDown3->Size = System::Drawing::Size(183, 27);
 			this->numericUpDown3->TabIndex = 88;
 			this->numericUpDown3->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
@@ -186,13 +202,13 @@ namespace CurseProject {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button1->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->button1->Location = System::Drawing::Point(11, 226);
+			this->button1->Location = System::Drawing::Point(6, 223);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(428, 53);
+			this->button1->Size = System::Drawing::Size(433, 47);
 			this->button1->TabIndex = 84;
 			this->button1->Text = L"Добавить";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &AdminForm2::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &LibrarianForm1::button1_Click);
 			// 
 			// textBox6
 			// 
@@ -202,9 +218,8 @@ namespace CurseProject {
 			this->textBox6->Margin = System::Windows::Forms::Padding(4);
 			this->textBox6->Multiline = true;
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(183, 22);
+			this->textBox6->Size = System::Drawing::Size(183, 25);
 			this->textBox6->TabIndex = 71;
-			this->textBox6->UseWaitCursor = true;
 			// 
 			// textBox8
 			// 
@@ -216,7 +231,6 @@ namespace CurseProject {
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(183, 22);
 			this->textBox8->TabIndex = 68;
-			this->textBox8->UseWaitCursor = true;
 			// 
 			// label4
 			// 
@@ -274,21 +288,22 @@ namespace CurseProject {
 			this->label7->Text = L"Год издания";
 			this->label7->UseWaitCursor = true;
 			// 
-			// AdminForm2
+			// AdminForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(446, 305);
+			this->ClientSize = System::Drawing::Size(445, 291);
 			this->Controls->Add(this->groupBox1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(464, 352);
+			this->MaximumSize = System::Drawing::Size(463, 338);
 			this->MinimizeBox = false;
-			this->MinimumSize = System::Drawing::Size(464, 352);
-			this->Name = L"AdminForm2";
+			this->MinimumSize = System::Drawing::Size(463, 338);
+			this->Name = L"AdminForm1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Вы выбрали добавить:  Стихотворение";
+			this->Text = L"Вы выбрали добавить: Повесть";
+			this->Load += gcnew System::EventHandler(this, &LibrarianForm1::AdminForm1_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
@@ -299,5 +314,8 @@ namespace CurseProject {
 		}
 #pragma endregion
 		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
-	};
+			  
+	private: System::Void AdminForm1_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }

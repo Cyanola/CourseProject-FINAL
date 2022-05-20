@@ -12,10 +12,10 @@ namespace CurseProject {
 	/// <summary>
 	/// Сводка для AdminForm1
 	/// </summary>
-	public ref class AdminForm1 : public System::Windows::Forms::Form
+	public ref class LibrarianForm6 : public System::Windows::Forms::Form
 	{
 	public:
-		AdminForm1(void)
+		LibrarianForm6(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace CurseProject {
 		/// <summary>
 		/// Освободить все используемые ресурсы.
 		/// </summary>
-		~AdminForm1()
+		~LibrarianForm6()
 		{
 			if (components)
 			{
@@ -93,7 +93,7 @@ namespace CurseProject {
 		/// <summary>
 		/// Обязательная переменная конструктора.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -102,7 +102,7 @@ namespace CurseProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AdminForm1::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LibrarianForm6::typeid));
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->numericUpDown2 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
@@ -138,15 +138,16 @@ namespace CurseProject {
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->groupBox1->ForeColor = System::Drawing::Color::Linen;
-			this->groupBox1->Location = System::Drawing::Point(1, 12);
+			this->groupBox1->Location = System::Drawing::Point(12, 12);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(466, 304);
+			this->groupBox1->Size = System::Drawing::Size(455, 276);
 			this->groupBox1->TabIndex = 90;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Добавить книгу";
 			// 
 			// numericUpDown2
 			// 
+			this->numericUpDown2->Cursor = System::Windows::Forms::Cursors::Default;
 			this->numericUpDown2->Location = System::Drawing::Point(256, 90);
 			this->numericUpDown2->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2022, 0, 0, 0 });
@@ -158,6 +159,7 @@ namespace CurseProject {
 			// 
 			// numericUpDown1
 			// 
+			this->numericUpDown1->Cursor = System::Windows::Forms::Cursors::Default;
 			this->numericUpDown1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->numericUpDown1->Location = System::Drawing::Point(256, 154);
@@ -175,7 +177,7 @@ namespace CurseProject {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label2->Location = System::Drawing::Point(7, 187);
+			this->label2->Location = System::Drawing::Point(7, 190);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(224, 22);
@@ -185,14 +187,15 @@ namespace CurseProject {
 			// 
 			// numericUpDown3
 			// 
-			this->numericUpDown3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->numericUpDown3->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->numericUpDown3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->numericUpDown3->Location = System::Drawing::Point(256, 189);
 			this->numericUpDown3->Margin = System::Windows::Forms::Padding(4);
 			this->numericUpDown3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 9, 0, 0, 0 });
 			this->numericUpDown3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericUpDown3->Name = L"numericUpDown3";
-			this->numericUpDown3->Size = System::Drawing::Size(183, 27);
+			this->numericUpDown3->Size = System::Drawing::Size(183, 24);
 			this->numericUpDown3->TabIndex = 88;
 			this->numericUpDown3->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
@@ -202,27 +205,30 @@ namespace CurseProject {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button1->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->button1->Location = System::Drawing::Point(6, 223);
+			this->button1->Location = System::Drawing::Point(11, 223);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(433, 47);
+			this->button1->Size = System::Drawing::Size(428, 47);
 			this->button1->TabIndex = 84;
 			this->button1->Text = L"Добавить";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &AdminForm1::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &LibrarianForm6::button1_Click);
 			// 
 			// textBox6
 			// 
+			this->textBox6->Cursor = System::Windows::Forms::Cursors::WaitCursor;
 			this->textBox6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox6->Location = System::Drawing::Point(256, 121);
 			this->textBox6->Margin = System::Windows::Forms::Padding(4);
 			this->textBox6->Multiline = true;
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(183, 25);
+			this->textBox6->Size = System::Drawing::Size(183, 22);
 			this->textBox6->TabIndex = 71;
+			this->textBox6->UseWaitCursor = true;
 			// 
 			// textBox8
 			// 
+			this->textBox8->Cursor = System::Windows::Forms::Cursors::WaitCursor;
 			this->textBox8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox8->Location = System::Drawing::Point(256, 52);
@@ -231,6 +237,7 @@ namespace CurseProject {
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(183, 22);
 			this->textBox8->TabIndex = 68;
+			this->textBox8->UseWaitCursor = true;
 			// 
 			// label4
 			// 
@@ -288,20 +295,20 @@ namespace CurseProject {
 			this->label7->Text = L"Год издания";
 			this->label7->UseWaitCursor = true;
 			// 
-			// AdminForm1
+			// AdminForm6
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(445, 291);
+			this->ClientSize = System::Drawing::Size(464, 288);
 			this->Controls->Add(this->groupBox1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->MaximumSize = System::Drawing::Size(463, 338);
-			this->MinimumSize = System::Drawing::Size(463, 338);
-			this->Name = L"AdminForm1";
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
+			this->MinimumSize = System::Drawing::Size(482, 335);
+			this->Name = L"AdminForm6";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Вы выбрали добавить: Повесть";
-			this->Load += gcnew System::EventHandler(this, &AdminForm1::AdminForm1_Load);
+			this->Text = L"Вы выбрали добавить: Пьесу";
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
@@ -311,9 +318,7 @@ namespace CurseProject {
 
 		}
 #pragma endregion
-		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
-			  
-	private: System::Void AdminForm1_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+
+	};
 }

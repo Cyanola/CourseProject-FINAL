@@ -1,10 +1,10 @@
-#include "AdminForm1.h"
+#include "LibrarianForm1.h"
 #include "Functions.h"
 #include "Classes.h"
 
 using namespace System;
 
-System::Void CurseProject::AdminForm1::button1_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void CurseProject::LibrarianForm1::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	String^ str = "Povest ";
 	str += textBox8->Text->ToString() + " "
