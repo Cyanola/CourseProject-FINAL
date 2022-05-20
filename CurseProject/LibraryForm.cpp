@@ -178,7 +178,7 @@ System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, Sy
 	else
 	{
 		srand(time(NULL));
-
+		MessageBox::Show("Вы можете получить книги в ближайшем отделении нашей библиотеки","Уведомление");
 		int day = 1 + rand() % 30;
 		this->temp = gcnew Temp();
 		this->temp->order_id = Guid::NewGuid();

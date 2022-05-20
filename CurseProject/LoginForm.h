@@ -39,6 +39,7 @@ namespace CurseProject {
 	private: System::Windows::Forms::Button^ AdminButton;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Button^ ChitatelButton;
+
 	protected:
 
 	protected:

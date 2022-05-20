@@ -79,3 +79,4 @@ Piesa Boris_Godunov 1870 Pushkin 601 9
 Piesa Bespridannitsa 1878 Ostrovsky 106 9
 Piesa Na_dne 1902 Gorky 247 9
 Piesa Stranny_Chelovek 1880 Lermontov 345 9
+Povest Kapitanskaya_Dochka 1826 Pushkin 332 1

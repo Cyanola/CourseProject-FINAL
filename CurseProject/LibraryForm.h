@@ -69,6 +69,7 @@ namespace CurseProject {
 
 
 
+
 	private: System::ComponentModel::IContainer^ components;
 
 	protected:
@@ -372,5 +373,7 @@ namespace CurseProject {
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void LibraryForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void backgroundWorker1_DoWork(System::Object^ sender, System::ComponentModel::DoWorkEventArgs^ e) {
+}
 };
 }
