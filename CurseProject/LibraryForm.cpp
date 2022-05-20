@@ -178,7 +178,7 @@ System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, Sy
 	else
 	{
 		srand(time(NULL));
-		MessageBox::Show("Вы можете получить книги в ближайшем отделении нашей библиотеки","Уведомление");
+		MessageBox::Show("Книги добавлены в Ваш профиль","Уведомление");
 		int day = 1 + rand() % 30;
 		this->temp = gcnew Temp();
 		this->temp->order_id = Guid::NewGuid();
@@ -193,7 +193,7 @@ System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, Sy
 		DateTime date1 = DateTime::Today;
 		DateTime answer = date1.AddDays(day);
 		int day_temp = Convert::ToInt16(date1.Day) + day;
-		String^ Str = answer.ToString("m") + " <= дата возврата книг ";
+		String^ Str = answer.ToString("m") + " <= дата последнего дня аренды книг ";
 		MessageBox::Show(Str, "Успешно");
 		dataGridData->Rows->Clear();
 		dataGridData->Columns->Clear();
@@ -217,11 +217,11 @@ void CurseProject::LibraryForm::Headers()
 }
 void CurseProject::LibraryForm::HeaderA_busk()
 {
-	dataGridData->TopLeftHeaderCell->Value = "###";
+	dataGridData->TopLeftHeaderCell->Value = "########";
 	DataGridViewTextBoxColumn^ c1 = gcnew DataGridViewTextBoxColumn();
 	c1->Name = "Список";
 	c1->HeaderText = "Жанр";
-	c1->Width = 50;
+	c1->Width = 150;
 	dataGridData->Columns->Add(c1);
 
 	dataGridData->AutoResizeColumn(0);
@@ -232,7 +232,7 @@ void CurseProject::LibraryForm::HeaderA()
 	DataGridViewTextBoxColumn^ c2 = gcnew DataGridViewTextBoxColumn();
 	c2->Name = "Список";
 	c2->HeaderText = "Жанр";
-	c2->Width = 50;
+	c2->Width = 150;
 	dataGridData->Columns->Add(c2);
 
 	dataGridData->AutoResizeColumn(0);

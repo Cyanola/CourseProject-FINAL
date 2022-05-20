@@ -204,7 +204,6 @@ namespace CurseProject {
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(183, 22);
 			this->textBox4->TabIndex = 71;
-			this->textBox4->UseWaitCursor = true;
 			// 
 			// textBox1
 			// 
@@ -216,7 +215,6 @@ namespace CurseProject {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(183, 22);
 			this->textBox1->TabIndex = 68;
-			this->textBox1->UseWaitCursor = true;
 			// 
 			// label11
 			// 
@@ -274,7 +272,7 @@ namespace CurseProject {
 			this->label8->Text = L"Год издания";
 			this->label8->UseWaitCursor = true;
 			// 
-			// AdminForm3
+			// LibrarianForm3
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -286,7 +284,7 @@ namespace CurseProject {
 			this->MaximumSize = System::Drawing::Size(466, 339);
 			this->MinimizeBox = false;
 			this->MinimumSize = System::Drawing::Size(466, 339);
-			this->Name = L"AdminForm3";
+			this->Name = L"LibrarianForm3";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Вы выбрали добавить:  Роман";
 			this->groupBox->ResumeLayout(false);

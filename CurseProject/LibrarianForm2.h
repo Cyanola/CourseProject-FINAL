@@ -204,7 +204,6 @@ namespace CurseProject {
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(183, 22);
 			this->textBox6->TabIndex = 71;
-			this->textBox6->UseWaitCursor = true;
 			// 
 			// textBox8
 			// 
@@ -216,7 +215,6 @@ namespace CurseProject {
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(183, 22);
 			this->textBox8->TabIndex = 68;
-			this->textBox8->UseWaitCursor = true;
 			// 
 			// label4
 			// 
@@ -274,7 +272,7 @@ namespace CurseProject {
 			this->label7->Text = L"Год издания";
 			this->label7->UseWaitCursor = true;
 			// 
-			// AdminForm2
+			// LibrarianForm2
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -286,7 +284,7 @@ namespace CurseProject {
 			this->MaximumSize = System::Drawing::Size(464, 352);
 			this->MinimizeBox = false;
 			this->MinimumSize = System::Drawing::Size(464, 352);
-			this->Name = L"AdminForm2";
+			this->Name = L"LibrarianForm2";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Вы выбрали добавить:  Стихотворение";
 			this->groupBox1->ResumeLayout(false);

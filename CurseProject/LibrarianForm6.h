@@ -224,7 +224,6 @@ namespace CurseProject {
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(183, 22);
 			this->textBox6->TabIndex = 71;
-			this->textBox6->UseWaitCursor = true;
 			// 
 			// textBox8
 			// 
@@ -237,7 +236,6 @@ namespace CurseProject {
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(183, 22);
 			this->textBox8->TabIndex = 68;
-			this->textBox8->UseWaitCursor = true;
 			// 
 			// label4
 			// 
@@ -295,7 +293,7 @@ namespace CurseProject {
 			this->label7->Text = L"Год издания";
 			this->label7->UseWaitCursor = true;
 			// 
-			// AdminForm6
+			// LibrarianForm6
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -306,7 +304,7 @@ namespace CurseProject {
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
 			this->MinimumSize = System::Drawing::Size(482, 335);
-			this->Name = L"AdminForm6";
+			this->Name = L"LibrarianForm6";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Вы выбрали добавить: Пьесу";
 			this->groupBox1->ResumeLayout(false);

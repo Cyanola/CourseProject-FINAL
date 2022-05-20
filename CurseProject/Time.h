@@ -21,10 +21,10 @@ public ref struct Temp
 
 	void B(Task<Guid>^ temp)
 	{
-		MessageBox::Show("Дата возврата книг:\nСегодня", "Состояние");
+		MessageBox::Show("Последний день аренды книг:\nСегодня", "Состояние");
 		this->value = 0;
 		this->order_id = System::Guid::Empty;
-		MessageBox::Show("Вернуть книги", "Возврат книг");
+		MessageBox::Show("Книги возвращены в библиотеку", "Возврат книг");
 	}
 	Temp(System::Void) { value = 0; order_id = System::Guid::Empty;	}
 };
