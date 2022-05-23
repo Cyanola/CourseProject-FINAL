@@ -282,7 +282,7 @@ void CurseProject::LibraryForm::HeaderE()
 System::Void CurseProject::LibraryForm::button3_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	if (temp->value == 0) MessageBox::Show("Вы не получали книги", "Упсс...");
-	else MessageBox::Show("До даты возврата книг: " + this->temp->value.ToString() + " дней", "Статус");
+	else MessageBox::Show("До даты последнего дня аренды книг: " + this->temp->value.ToString() + " дней", "Статус");
 }
 
 void CurseProject::LibraryForm::ShowRasskaz()	// отображение ввиде таблицы

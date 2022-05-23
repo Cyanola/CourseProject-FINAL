@@ -4,7 +4,7 @@ using namespace System;
 using namespace System::Threading::Tasks;
 Librarian::Librarian()
 {
-	ifstream File(FILE_NAME);	// конструктор ворует начальные данные
+	ifstream File(BOOKS_FILE);	// конструктор ворует начальные данные
 	if (File.is_open())
 	{
 		count = 0;
@@ -20,7 +20,7 @@ Librarian::Librarian()
 }
 
 
-std::vector<std::string> Librarian::Print_Admin_data()
+std::vector<std::string> Librarian::Print_Lib_data()
 {
 	return librarian_data;
 }
@@ -44,7 +44,7 @@ vector <string> Favourites_::GetFV()
 
 Builder::Builder()
 {
-	ifstream File(FILE_NAME);
+	ifstream File(BOOKS_FILE);
 	if (!File.is_open()) throw exception("File read error");
 	while (!File.eof()) {
 		id++; string temp;	// 
@@ -72,7 +72,7 @@ void Object_::book()
 
 void Object_::Favourites(int id_)
 {
-	fstream File(FILE_NAME); fstream File_Favourites(FILE_FAVOURITES_NAME, ios_base::app); // открытие файлов
+	fstream File(BOOKS_FILE); fstream File_Favourites(FILE_FAVOURITES_NAME, ios_base::app); // открытие файлов
 	id_--; // аргумент передаваем в метод класса Object
 	Favourites_ favourites_; auto valueFavourites = favourites_.GetFV();
 	string temp; string buff;// временные переменные
@@ -103,7 +103,7 @@ void Object_::Favourites(int id_)
 		this->data[id_].replace(data[id_].size() - 1, data[id_].size(), temp2); // замена в векторе количества товара
 	}
 	File.close(); File_Favourites.close(); // закрытие отработанных файлов
-	ofstream File_New(FILE_NAME, ios_base::trunc); // открытие файла в режиме "запись в конец"
+	ofstream File_New(BOOKS_FILE, ios_base::trunc); // открытие файла в режиме "запись в конец"
 	if (!File_New.is_open()) throw exception("File read error"); // ошибка открытия файла
 	for (int i = 0; i < data.size(); i++) {  // запись добавленного предмета в конец "Избранного"
 		if (i == data.size() - 1) File_New << data[i];

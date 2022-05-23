@@ -24,7 +24,7 @@ public ref struct Temp
 		MessageBox::Show("Последний день аренды книг:\nСегодня", "Состояние");
 		this->value = 0;
 		this->order_id = System::Guid::Empty;
-		MessageBox::Show("Книги возвращены в библиотеку", "Возврат книг");
+		MessageBox::Show("Доступ к книгам приостановлен", "Уведомление");
 	}
 	Temp(System::Void) { value = 0; order_id = System::Guid::Empty;	}
 };

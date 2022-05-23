@@ -79,7 +79,7 @@ namespace CurseProject {
 			this->AdminButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->AdminButton->ForeColor = System::Drawing::SystemColors::Info;
-			this->AdminButton->Location = System::Drawing::Point(21, 279);
+			this->AdminButton->Location = System::Drawing::Point(21, 280);
 			this->AdminButton->Name = L"AdminButton";
 			this->AdminButton->Size = System::Drawing::Size(332, 39);
 			this->AdminButton->TabIndex = 8;
@@ -146,7 +146,6 @@ namespace CurseProject {
 	private: System::Void LoginForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void AdminButton_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e){}
 };
 }

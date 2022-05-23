@@ -3,9 +3,9 @@
 #include "LibraryForm.h"
 using namespace System;
 
-void SetData()	// ‘ункци€ возвращение данных в исходный вид
+void SetData()	
 {
-	ifstream File_Default(FILE_MAIN_NAME);
+	ifstream File_Default(MAIN_BOOKS);
 	vector<string> temp_data; string temp;
 	if (!File_Default.is_open()) throw exception("File read error");
 	while (!File_Default.eof()) {
@@ -13,7 +13,7 @@ void SetData()	// ‘ункци€ возвращение данных в исходный вид
 		temp_data.push_back(temp);
 	}
 	File_Default.close();
-	ofstream File_Data(FILE_NAME, ios_base::trunc);
+	ofstream File_Data(BOOKS_FILE, ios_base::trunc);
 	if (!File_Data.is_open()) throw exception("File read error");
 	for (int i = 0; i < temp_data.size(); i++) {
 		if (i == temp_data.size() - 1) File_Data << temp_data[i];
@@ -29,15 +29,15 @@ void ReGroupData()
 	Object_ obj;
 	obj.book();
 	regroup = obj.Print();
-	ofstream File_New(FILE_NAME, ios_base::trunc); // открытие файла в режиме "запись в конец"
-	if (!File_New.is_open()) throw exception("File read error"); // ошибка открыти€ файла
-	for (int i = 0; i < regroup.size(); i++) {  // запись добавленного предмета в конец "корзины"
+	ofstream File_New(BOOKS_FILE, ios_base::trunc); 
+	if (!File_New.is_open()) throw exception("File read error");
+	for (int i = 0; i < regroup.size(); i++) { 
 		if (i == regroup.size() - 1) File_New << regroup[i];
 		else File_New << regroup[i] << endl;
 	}
 }
 
-std::string Stos(System::String^ s) // из String в std::string
+std::string Stos(System::String^ s)
 {
 	using namespace System::Runtime::InteropServices;
 	const char* chars =
@@ -46,7 +46,7 @@ std::string Stos(System::String^ s) // из String в std::string
 	return os;
 }
 
-System::String^ Convert_string_To_String(std::string& os) // из std::string в String
+System::String^ Convert_string_To_String(std::string& os)
 {
 	System::String^ s;
 	s = gcnew System::String(os.c_str());
@@ -57,8 +57,8 @@ vector<Ones> ReturnCell(vector<string> s, int count)
 {
 	Ones ones;
 	vector <Ones> ones_v;
-	regex reg(BITSTRING); // регул€рка
-	smatch cat; // регул€рка
+	regex reg(BITSTRING);
+	smatch cat; 
 	for (int i = 0; i < count; i++)
 	{
 		ones_v.push_back(ones);

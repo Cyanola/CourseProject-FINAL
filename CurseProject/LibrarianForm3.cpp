@@ -10,7 +10,7 @@ System::Void CurseProject::LibrarianForm3::button2_Click(System::Object^ sender,
 		+ numericUpDown1->Text->ToString() + " "
 		+ numericCount->Text->ToString();
 	std::string temp = Stos(str);
-	std::ofstream File(FILE_MAIN_NAME, std::ios::app);
+	std::ofstream File(MAIN_BOOKS, std::ios::app);
 	File << "\n" << temp;
 	MessageBox::Show("Успешно", "Состояние");
 	File.close();

@@ -10,8 +10,8 @@
 #include <ctime>
 using namespace std;
 #define FILE_FAVOURITES_NAME "Favourites.txt"		//
-#define FILE_NAME "Data.txt"				// Имена Файлов
-#define FILE_MAIN_NAME "DefaultData.txt"
+#define BOOKS_FILE "Data.txt"				// Имена Файлов
+#define MAIN_BOOKS "DefaultData.txt"
 
 #define SEARCH_EXP_NEW R"(\w{2,17}\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" //Общее регулярное выражение
 #define SEARCH_POVEST R"((Povest)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Повести
@@ -46,7 +46,7 @@ class Librarian
 {
 public:
 	Librarian();
-	vector<string> Print_Admin_data();
+	vector<string> Print_Lib_data();
 	string GetPassword() { return Password; };
 	int GetCount() { return count; }
 private:

@@ -368,7 +368,7 @@ namespace CurseProject {
 private: System::Void Stih_Click(System::Object^ sender, System::EventArgs^ e); 
 private: System::Void Piesa_Click(System::Object^ sender, System::EventArgs^ e); 
 	private: System::Void Skazka_Click(System::Object^ sender, System::EventArgs^ e); 
-private: void Show_Admin_retry();
+private: void Show_Librarian_retry();
 	private: System::Void LibrarianForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 };

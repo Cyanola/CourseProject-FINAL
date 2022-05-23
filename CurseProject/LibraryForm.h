@@ -114,6 +114,7 @@ namespace CurseProject {
 			// 
 			this->ALL->CausesValidation = false;
 			this->ALL->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->ALL->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->ALL->Location = System::Drawing::Point(14, 53);
 			this->ALL->Margin = System::Windows::Forms::Padding(4, 3, 4, 3);
 			this->ALL->Name = L"ALL";
@@ -219,9 +220,9 @@ namespace CurseProject {
 			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button3->Location = System::Drawing::Point(12, 465);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(139, 49);
+			this->button3->Size = System::Drawing::Size(139, 64);
 			this->button3->TabIndex = 12;
-			this->button3->Text = L"Узнать дату возврата книг\r\n\r\n";
+			this->button3->Text = L"Узнать дату окночания аренды книг";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &LibraryForm::button3_Click);
 			// 

@@ -12,14 +12,14 @@
 using namespace System;
 System::Void CurseProject::LibrarianForm::ShowL_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	Show_Admin_retry();
+	Show_Librarian_retry();
 }
 
 void CurseProject::LibrarianForm::ShowLibrarian()
 {
-	Librarian admin;
+	Librarian lib;
 	std::vector<std::string> v;
-	v = admin.Print_Admin_data();
+	v = lib.Print_Lib_data();
 	int temp = 0;
 	dataGridView1->TopLeftHeaderCell->Value = "id";
 	for (int i = 0; i < v.size(); i++)
@@ -91,12 +91,12 @@ System::Void CurseProject::LibrarianForm::Piesa_Click(System::Object^ sender, Sy
 	form6->ShowDialog();
 }
 
-void CurseProject::LibrarianForm::Show_Admin_retry()
+void CurseProject::LibrarianForm::Show_Librarian_retry()
 {
-	Librarian ad;
+	Librarian lib;
 	dataGridView1->Rows->Clear();
 	dataGridView1->Columns->Clear();
-	dataGridView1->RowCount = ad.GetCount();
+	dataGridView1->RowCount = lib.GetCount();
 
 	HeaderLibrarian();
 	ShowLibrarian();

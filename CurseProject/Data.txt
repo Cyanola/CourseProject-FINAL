@@ -1,5 +1,5 @@
 Povest Kotlovan 1930 Platonov 347 7
-Povest Yunost 1852 Tolstoy 155 9
+Povest Yunost 1852 Tolstoy 155 8
 Povest Nos 1856 Gogol 132 9
 Povest Portret 1863 Gogol 211 9
 Povest Alye_Parusa 1852 Grin 477 9
