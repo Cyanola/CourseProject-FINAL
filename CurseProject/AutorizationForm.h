@@ -33,6 +33,7 @@ namespace CurseProject {
 			{
 				delete components;
 			}
+			Application::Exit();
 		}
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
@@ -41,6 +42,7 @@ namespace CurseProject {
 	protected:
 	private: System::Windows::Forms::Button^ Backkk;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::TextBox^ textBox1;
 
 	private:
@@ -63,6 +65,7 @@ namespace CurseProject {
 			this->backgroundWorker1 = (gcnew System::ComponentModel::BackgroundWorker());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -123,9 +126,19 @@ namespace CurseProject {
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->PasswordChar = '*';
-			this->textBox1->Size = System::Drawing::Size(215, 28);
+			this->textBox1->Size = System::Drawing::Size(184, 28);
 			this->textBox1->TabIndex = 4;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &AutorizationForm::textBox1_TextChanged);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(209, 61);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(32, 28);
+			this->button2->TabIndex = 7;
+			this->button2->Text = L"button2";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &AutorizationForm::button2_Click);
 			// 
 			// AutorizationForm
 			// 
@@ -133,6 +146,7 @@ namespace CurseProject {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(253, 138);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->Backkk);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1);
@@ -153,6 +167,8 @@ namespace CurseProject {
 		private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Backkk_Click(System::Object^ sender, System::EventArgs^ e);
+		   private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
+
 
 };
 }

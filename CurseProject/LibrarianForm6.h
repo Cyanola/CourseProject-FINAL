@@ -33,6 +33,7 @@ namespace CurseProject {
 			{
 				delete components;
 			}
+			Application::Exit();
 		}
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	protected:

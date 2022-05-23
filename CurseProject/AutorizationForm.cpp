@@ -26,4 +26,16 @@ System::Void CurseProject::AutorizationForm::Backkk_Click(System::Object^ sender
     this->Hide();
 
 }
+System::Void CurseProject::AutorizationForm::button2_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    int i = 0;
+    if (i == 0) {
+        textBox1->PasswordChar = '\0';
+        i = 1;
+    }
+    else {
+        textBox1->PasswordChar = '*';
+        i = 0;
+    }
+}
 

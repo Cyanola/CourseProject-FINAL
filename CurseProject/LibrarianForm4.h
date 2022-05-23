@@ -33,6 +33,7 @@ namespace CurseProject {
 			{
 				delete components;
 			}
+			Application::Exit();
 		}
 	private: System::Windows::Forms::NumericUpDown^ numericUpDown2;
 	protected:
