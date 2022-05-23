@@ -1,5 +1,5 @@
-Povest Kotlovan 1930 Platonov 347 7
-Povest Yunost 1852 Tolstoy 155 8
+Povest Kotlovan 1930 Platonov 347 8
+Povest Yunost 1852 Tolstoy 155 9
 Povest Nos 1856 Gogol 132 9
 Povest Portret 1863 Gogol 211 9
 Povest Alye_Parusa 1852 Grin 477 9
@@ -79,4 +79,3 @@ Piesa Boris_Godunov 1870 Pushkin 601 9
 Piesa Bespridannitsa 1878 Ostrovsky 106 9
 Piesa Na_dne 1902 Gorky 247 9
 Piesa Stranny_Chelovek 1880 Lermontov 345 9
-Povest Kapitanskaya_Dochka 1826 Pushkin 332 1

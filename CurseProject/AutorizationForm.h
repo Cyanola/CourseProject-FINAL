@@ -74,10 +74,11 @@ namespace CurseProject {
 			this->label1->BackColor = System::Drawing::SystemColors::Control;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(22, 32);
+			this->label1->Location = System::Drawing::Point(13, 33);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->MinimumSize = System::Drawing::Size(225, 25);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(175, 25);
+			this->label1->Size = System::Drawing::Size(225, 25);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"¬ведите пароль";
 			// 
@@ -109,7 +110,7 @@ namespace CurseProject {
 			this->button1->Location = System::Drawing::Point(128, 97);
 			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(100, 35);
+			this->button1->Size = System::Drawing::Size(112, 35);
 			this->button1->TabIndex = 5;
 			this->button1->Text = L"¬ход";
 			this->button1->UseVisualStyleBackColor = true;
@@ -132,9 +133,10 @@ namespace CurseProject {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(209, 61);
+			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
+			this->button2->Location = System::Drawing::Point(204, 61);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(32, 28);
+			this->button2->Size = System::Drawing::Size(37, 28);
 			this->button2->TabIndex = 7;
 			this->button2->Text = L"button2";
 			this->button2->UseVisualStyleBackColor = true;
