@@ -75,7 +75,7 @@ private:
 	int fw = 0; 
 	vector <string> fv; 
 };
-class Object_ : public Builder
+class Work_ : public Builder
 {
 public:
 	void book() override;
@@ -90,7 +90,7 @@ protected:
 	int begin;
 	int end;
 };
-class Povest_ : public Object_
+class Povest_ : public Work_
 {
 public:
 	Povest_();
@@ -104,7 +104,7 @@ protected:
 	int begin = 0;
 	int end = 0;
 };
-class Stih_ : public Object_
+class Stih_ : public Work_
 {
 public:
 	Stih_();
@@ -116,7 +116,7 @@ protected:
 	vector <string> Stih_Data;
 	int count = 0;
 };
-class Roman_ : public Object_
+class Roman_ : public Work_
 {
 public:
 	Roman_();
@@ -128,7 +128,7 @@ protected:
 	vector <string> Roman_Data;
 	int count = 0;
 };
-class Rasskaz_ : public Object_
+class Rasskaz_ : public Work_
 {
 public:
 	Rasskaz_();
@@ -140,7 +140,7 @@ protected:
 	vector <string> Rasskaz_Data;
 	int count = 0;
 };
-class Skazka_ : public Object_
+class Skazka_ : public Work_
 {
 public:
 	Skazka_();
@@ -152,7 +152,7 @@ protected:
 	vector <string> Skazka_Data;
 	int count = 0;
 };
-class Piesa_ : public Object_
+class Piesa_ : public Work_
 {
 public:
 	Piesa_();

@@ -54,7 +54,7 @@ Builder::Builder()
 	File.close();
 }
 
-void Object_::book()
+void Work_::book()
 {
 	regex regular(SEARCH_EXP_NEW);	
 	smatch find_word;
@@ -70,7 +70,7 @@ void Object_::book()
 	}
 }
 
-void Object_::Favourites(int id_)
+void Work_::Favourites(int id_)
 {
 	fstream File(BOOKS_FILE); fstream File_Favourites(FILE_FAVOURITES_NAME, ios_base::app); // открытие файлов
 	id_--; 
@@ -112,7 +112,7 @@ void Object_::Favourites(int id_)
 	File_New.close();
 }
 
-std::vector<string> Object_::Print()
+std::vector<string> Work_::Print()
 {
 	return data;
 }

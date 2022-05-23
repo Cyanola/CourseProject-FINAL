@@ -26,9 +26,9 @@ void SetData()
 void ReGroupData()
 {
 	std::vector<std::string> regroup;
-	Object_ obj;
-	obj.book();
-	regroup = obj.Print();
+	Work_ work;
+	work.book();
+	regroup = work.Print();
 	ofstream File_New(BOOKS_FILE, ios_base::trunc); 
 	if (!File_New.is_open()) throw exception("File read error");
 	for (int i = 0; i < regroup.size(); i++) { 
