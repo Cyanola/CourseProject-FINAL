@@ -22,7 +22,7 @@ using namespace std;
 #define SEARCH_SKAZKA R"((Skazka)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // –егул€рное выражение дл€ группы —казки
 #define BITSTRING R"((\w{2,30}\s)|(\w{3,15})|(\d{2,4})|(\d{1}))" //–егул€рное выражени€ дл€ разбиени€ строки на подстроки
 
-enum En_name
+enum Head_name
 {
 	Janr = 1,
 	Nazvanie = 2,
@@ -32,7 +32,7 @@ enum En_name
 	Ekzemps = 6,
 };
 
-struct Ones
+struct Heads
 {
 	string Janr = "";
 	string Nazvanie = "";
@@ -50,7 +50,7 @@ public:
 	string GetPassword() { return Password; };
 	int GetCount() { return count; }
 private:
-	const string Password = "OOP1337";
+	const string Password = "12345";
 	vector <string> librarian_data;
 	int count = 0;
 };
@@ -72,8 +72,8 @@ public:
 	vector <string> GetFV();
 	int GetFW() { return fw; }
 private:
-	int fw = 0; // favourites count
-	vector <string> fv; // favourites ko
+	int fw = 0; 
+	vector <string> fv; 
 };
 class Object_ : public Builder
 {
@@ -85,7 +85,7 @@ public:
 	int GetBegin() { return begin; }
 	int GetEnd() { return end; }
 protected:
-	vector <string> basket_;
+	vector <string> favourites_;
 	int count = 1;
 	int begin;
 	int end;
@@ -164,4 +164,4 @@ protected:
 	vector <string> Piesa_Data;
 	int count = 0;
 };
-std::vector<Ones> ReturnCell(std::vector<std::string> s, int count);
+std::vector<Heads> ReturnCell(std::vector<std::string> s, int count);

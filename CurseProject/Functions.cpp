@@ -53,18 +53,16 @@ System::String^ Convert_string_To_String(std::string& os)
 	return s;
 }
 
-vector<Ones> ReturnCell(vector<string> s, int count)
+vector<Heads> ReturnCell(vector<string> s, int count)
 {
-	Ones ones;
-	vector <Ones> ones_v;
+	Heads ones;
+	vector <Heads> ones_v;
 	regex reg(BITSTRING);
 	smatch cat; 
 	for (int i = 0; i < count; i++)
 	{
 		ones_v.push_back(ones);
 		int iterator = 0;
-
-		// Функция
 		while (regex_search(s[i], cat, reg))
 		{
 			switch (iterator)

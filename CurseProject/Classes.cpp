@@ -4,12 +4,12 @@ using namespace System;
 using namespace System::Threading::Tasks;
 Librarian::Librarian()
 {
-	ifstream File(BOOKS_FILE);	// конструктор ворует начальные данные
+	ifstream File(BOOKS_FILE);	
 	if (File.is_open())
 	{
 		count = 0;
 		while (!File.eof()) {
-			string temp;	// временная переменная строчного типа
+			string temp;	
 			getline(File, temp);
 			this->librarian_data.push_back(temp);
 			count++;
@@ -56,15 +56,15 @@ Builder::Builder()
 
 void Object_::book()
 {
-	regex regular(SEARCH_EXP_NEW);	// регулярное выражение
+	regex regular(SEARCH_EXP_NEW);	
 	smatch find_word;
-	vector<string>::iterator it = data.begin();// Удаление мусора
-	int i = 0; // временная переменная
+	vector<string>::iterator it = data.begin();
+	int i = 0; 
 	count = id;
 	while (i < id) {
-		if (!regex_match(data[i], find_word, regular)) {// проверка
+		if (!regex_match(data[i], find_word, regular)) {
 			data.erase(data.begin() + i);
-			id--; i--;									// сдвиг итератора 
+			id--; i--;									
 		}
 		i++;
 	}
@@ -73,14 +73,14 @@ void Object_::book()
 void Object_::Favourites(int id_)
 {
 	fstream File(BOOKS_FILE); fstream File_Favourites(FILE_FAVOURITES_NAME, ios_base::app); // открытие файлов
-	id_--; // аргумент передаваем в метод класса Object
+	id_--; 
 	Favourites_ favourites_; auto valueFavourites = favourites_.GetFV();
-	string temp; string buff;// временные переменные
+	string temp; string buff;
 	temp = (data[id_].c_str()[data[id_].size() - 1]);
 	buff = data[id_];
-	int count = stoi(temp); // преобразование из строчного типа в целочисленный
-	if (count == 1) {									// проверка, если товар в одном экземпляре,
-		buff.replace(buff.size() - 1, buff.size(), "1");// то удаляем его из общего списка товаров
+	int count = stoi(temp); 
+	if (count == 1) {									
+		buff.replace(buff.size() - 1, buff.size(), "1");
 		if (valueFavourites[NULL] == "") {
 			File_Favourites << buff;
 		}
@@ -98,14 +98,14 @@ void Object_::Favourites(int id_)
 		else
 		{
 			File_Favourites << endl << buff;
-		} // запись данных в файл "Избранное"
-		count--; string temp2 = to_string(count); // преоброзование уменьшенного значения в строчный тип
-		this->data[id_].replace(data[id_].size() - 1, data[id_].size(), temp2); // замена в векторе количества товара
+		}
+		count--; string temp2 = to_string(count); 
+		this->data[id_].replace(data[id_].size() - 1, data[id_].size(), temp2); 
 	}
-	File.close(); File_Favourites.close(); // закрытие отработанных файлов
-	ofstream File_New(BOOKS_FILE, ios_base::trunc); // открытие файла в режиме "запись в конец"
-	if (!File_New.is_open()) throw exception("File read error"); // ошибка открытия файла
-	for (int i = 0; i < data.size(); i++) {  // запись добавленного предмета в конец "Избранного"
+	File.close(); File_Favourites.close(); 
+	ofstream File_New(BOOKS_FILE, ios_base::trunc);
+	if (!File_New.is_open()) throw exception("File read error");
+	for (int i = 0; i < data.size(); i++) {  
 		if (i == data.size() - 1) File_New << data[i];
 		else File_New << data[i] << endl;
 	}
@@ -121,7 +121,7 @@ Povest_::Povest_()
 {
 	bool temp = true;
 	smatch find_world;
-	regex regular(SEARCH_POVEST);	// регулярное выражение
+	regex regular(SEARCH_POVEST);	
 	for (int i = 0; i < id; i++)
 	{
 		if (regex_search(data[i], find_world, regular)) {
@@ -144,7 +144,7 @@ Stih_::Stih_()
 {
 	bool temp = true;
 	smatch find_world;
-	regex regular(SEARCH_STIH);	// регулярное выражение
+	regex regular(SEARCH_STIH);	
 	for (int i = 0; i < id; i++)
 	{
 		if (regex_search(data[i], find_world, regular)) {
@@ -166,7 +166,7 @@ Roman_::Roman_()
 {
 	bool temp = true;
 	smatch find_world;
-	regex regular(SEARCH_ROMAN);	// регулярное выражение
+	regex regular(SEARCH_ROMAN);	
 	for (int i = 0; i < id; i++)
 	{
 		if (regex_search(data[i], find_world, regular)) {
@@ -188,7 +188,7 @@ Rasskaz_::Rasskaz_()
 {
 	bool temp = true;
 	smatch find_world;
-	regex regular(SEARCH_RASSKAZ);	// регулярное выражение
+	regex regular(SEARCH_RASSKAZ);	
 	for (int i = 0; i < id; i++)
 	{
 		if (regex_search(data[i], find_world, regular)) {
@@ -209,7 +209,7 @@ Skazka_::Skazka_()
 {
 	bool temp = true;
 	smatch find_world;
-	regex regular(SEARCH_SKAZKA);	// регулярное выражение
+	regex regular(SEARCH_SKAZKA);	
 	for (int i = 0; i < id; i++)
 	{
 		if (regex_search(data[i], find_world, regular)) {
@@ -230,7 +230,7 @@ Piesa_::Piesa_()
 {
 	bool temp = true;
 	smatch find_world;
-	regex regular(SEARCH_PIESA);	// регулярное выражение
+	regex regular(SEARCH_PIESA);	
 	for (int i = 0; i < id; i++)
 	{
 		if (regex_search(data[i], find_world, regular)) {
