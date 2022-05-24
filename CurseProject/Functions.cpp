@@ -53,7 +53,7 @@ System::String^ Convert_string_To_String(std::string& os)
 	return s;
 }
 
-vector<Heads> ReturnCell(vector<string> s, int count)
+vector<Heads> DivideRow(vector<string> s, int count)
 {
 	Heads heads;
 	vector <Heads> heads_v;

@@ -1,14 +1,16 @@
 #pragma once
 #include <iostream>
+#include <regex>
 #include <vector>
+#include <thread>
+#include <algorithm>
 #include <fstream>
 #include <string>
-#include <thread>
 #include <chrono>
-#include <regex>
-#include <algorithm>
 #include <ctime>
+
 using namespace std;
+
 #define FILE_FAVOURITES_NAME "Favourites.txt"
 #define BOOKS_FILE "Data.txt"				// Имена Файлов
 #define MAIN_BOOKS "DefaultData.txt"
@@ -164,4 +166,4 @@ protected:
 	vector <string> Piesa_Data;
 	int count = 0;
 };
-std::vector<Heads> ReturnCell(std::vector<std::string> s, int count);
+std::vector<Heads> DivideRow(std::vector<std::string> s, int count);

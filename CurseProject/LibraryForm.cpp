@@ -295,7 +295,7 @@ void CurseProject::LibraryForm::ShowRasskaz()	// отображение ввиде таблицы
 	smatch find_world;
 	regex regular(SEARCH_RASSKAZ);
 	std::vector<string> v = work.Print();
-	vector<Heads> heads_v = ReturnCell(v, work.GetCount());
+	vector<Heads> heads_v = DivideRow(v, work.GetCount());
 	for (int i = rasskaz.GetBegin(); i < work.GetCount(); i++)
 	{
 		if (regex_search(v[i], find_world, regular)) {
@@ -341,7 +341,7 @@ void CurseProject::LibraryForm::ShowFav()
 	Favourites_ favourites;
 	std::vector<string> v = favourites.GetFV();
 	dataGridData->ClearSelection();
-	vector<Heads> ones_v = ReturnCell(v, favourites.GetFW());
+	vector<Heads> ones_v = DivideRow(v, favourites.GetFW());
 	for (int i = 0; i < favourites.GetFW(); i++)
 	{
 		dataGridData->Rows[temp]->HeaderCell->Value = Convert::ToString(i + 1) + ".";
@@ -367,7 +367,7 @@ void CurseProject::LibraryForm::ShowRoman()
 	smatch find_world;
 	regex regular(SEARCH_ROMAN);
 	std::vector<string> v = work.Print();
-	vector<Heads> heads_v = ReturnCell(v, work.GetCount());
+	vector<Heads> heads_v = DivideRow(v, work.GetCount());
 	for (int i = roman.GetBegin(); i < work.GetCount(); i++)
 	{
 		if (regex_search(v[i], find_world, regular)) {
@@ -400,7 +400,7 @@ void CurseProject::LibraryForm::ShowPovest()
 	dataGridData->ClearSelection();
 	smatch find_world;
 	regex regular(SEARCH_POVEST);
-	vector<Heads> heads_v = ReturnCell(v, work.GetCount());
+	vector<Heads> heads_v = DivideRow(v, work.GetCount());
 	for (int i = povest.GetBegin(); i < work.GetCount(); i++)
 	{
 		if (regex_search(v[i], find_world, regular)) {
@@ -427,7 +427,7 @@ void CurseProject::LibraryForm::Show()
 	Work_ work;
 	work.book();
 	auto v = work.Print();
-	vector<Heads> heads_v = ReturnCell(v, work.GetCount());
+	vector<Heads> heads_v = DivideRow(v, work.GetCount());
 	for (int i = 0; i < work.GetCount(); i++)
 	{
 		dataGridData->Rows[i]->HeaderCell->Value = "=>";
@@ -454,7 +454,7 @@ void CurseProject::LibraryForm::ShowStih()
 	dataGridData->ClearSelection();
 	smatch find_world;
 	regex regular(SEARCH_STIH);
-	vector<Heads> heads_v = ReturnCell(v, work.GetCount());
+	vector<Heads> heads_v = DivideRow(v, work.GetCount());
 	for (int i = stih.GetBegin(); i < work.GetCount(); i++)
 	{
 		if (regex_search(v[i], find_world, regular)) {
@@ -486,7 +486,7 @@ void CurseProject::LibraryForm::ShowSkazka()
 	dataGridData->ClearSelection();
 	smatch find_world;
 	regex regular(SEARCH_SKAZKA);
-	vector<Heads> heads_v = ReturnCell(v, work.GetCount());
+	vector<Heads> heads_v = DivideRow(v, work.GetCount());
 	for (int i = skazka.GetBegin(); i < work.GetCount(); i++)
 	{
 		if (regex_search(v[i], find_world, regular)) {
@@ -518,7 +518,7 @@ void CurseProject::LibraryForm::ShowPiesa()
 	dataGridData->ClearSelection();
 	smatch find_world;
 	regex regular(SEARCH_PIESA);
-	vector<Heads> heads_v = ReturnCell(v, work.GetCount());
+	vector<Heads> heads_v = DivideRow(v, work.GetCount());
 	for (int i = piesa.GetBegin(); i < work.GetCount(); i++)
 	{
 		if (regex_search(v[i], find_world, regular)) {
