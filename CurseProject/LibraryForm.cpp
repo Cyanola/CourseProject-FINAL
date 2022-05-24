@@ -13,7 +13,7 @@ System::Void CurseProject::LibraryForm::ALL_Click(System::Object^ sender, System
 	Work_ work; auto v = work.Print(); work.book();
 	dataGridData->RowCount = work.GetCount();
 	if (v[NULL] == "") {
-		MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс...");
+		MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Ошибка");
 		dataGridData->Rows->Clear();
 		dataGridData->Columns->Clear();
 	}
@@ -32,7 +32,7 @@ System::Void CurseProject::LibraryForm::Povest_Click(System::Object^ sender, Sys
 	Povest_ povest; Work_ work;
 	auto v = work.Print();
 	dataGridData->RowCount = povest.GetCount();
-	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Ошибка");
 	else
 	{
 		Headers();
@@ -46,7 +46,7 @@ System::Void CurseProject::LibraryForm::Stih_Click(System::Object^ sender, Syste
 	dataGridData->Columns->Clear();
 	Stih_ stih; Work_ work; auto v = work.Print();
 	dataGridData->RowCount = stih.GetCount();
-	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Ошибка");
 	else
 	{
 		Headers();
@@ -60,7 +60,7 @@ System::Void CurseProject::LibraryForm::Skazka_Click(System::Object^ sender, Sys
 	dataGridData->Columns->Clear();
 	Skazka_ skazka; Work_ work; auto v = work.Print();
 	dataGridData->RowCount = skazka.GetCount();
-	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Ошибка");
 	else
 	{
 		Headers();
@@ -74,7 +74,7 @@ System::Void CurseProject::LibraryForm::Piesa_Click(System::Object^ sender, Syst
 	dataGridData->Columns->Clear();
 	Piesa_ piesa; Work_ work; auto v = work.Print();
 	dataGridData->RowCount = piesa.GetCount();
-	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Ошибка");
 	else
 	{
 		Headers();
@@ -89,7 +89,7 @@ System::Void CurseProject::LibraryForm::Roman_Click(System::Object^ sender, Syst
 	dataGridData->Columns->Clear();
 	Roman_ roman; Work_ work; auto v = work.Print();
 	dataGridData->RowCount = roman.GetCount();
-	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Ошибка");
 	else
 	{
 		Headers();
@@ -104,7 +104,7 @@ System::Void CurseProject::LibraryForm::Rasskaz_Click(System::Object^ sender, Sy
 	dataGridData->Columns->Clear();
 	Rasskaz_ rasskaz; Work_ work; auto v = work.Print();
 	dataGridData->RowCount = rasskaz.GetCount();
-	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Упсс....");
+	if (v[0] == "") MessageBox::Show("Библиотека закрыта, ведется уборка помещения", "Ошибка");
 	else
 	{
 		Headers();
@@ -116,7 +116,7 @@ System::Void CurseProject::LibraryForm::Rasskaz_Click(System::Object^ sender, Sy
 System::Void CurseProject::LibraryForm::butfav_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	Favourites_ favourites; auto valuefavourites_temp = favourites.GetFV();
-	if (valuefavourites_temp[NULL] == "") { MessageBox::Show("Раздел Избранное пуст", "Упс..."); }
+	if (valuefavourites_temp[NULL] == "") { MessageBox::Show("Раздел Избранное пуст", "Ошибка"); }
 	else
 	{
 
@@ -145,7 +145,7 @@ System::Void CurseProject::LibraryForm::Fav_Click(System::Object^ sender, System
 		temp_current_Cell = dataGridData->CurrentCell->Value->ToString();
 		try {
 			ask = Convert::ToInt16(temp_current_Cell);
-			if ((ask > work.GetCount()) || (vector_books[NULL] == "")) { MessageBox::Show("Индекс не принадлежит диапазону", "Упс"); }
+			if ((ask > work.GetCount()) || (vector_books[NULL] == "")) { MessageBox::Show("Индекс не принадлежит диапазону", "Ошибка"); }
 			else {
 				work.Favourites(ask);
 				dataGridData->Rows->Clear();
@@ -165,16 +165,16 @@ System::Void CurseProject::LibraryForm::Fav_Click(System::Object^ sender, System
 		}
 		catch (Exception^ e)
 		{
-			MessageBox::Show("Неизвестная ошибка", "Упс...");
+			MessageBox::Show("Неизвестная ошибка", "Ошибка...");
 		}
 	}
 }
 
-System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, System::EventArgs^ e) // заказ
+System::Void CurseProject::LibraryForm::button2_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	Favourites_ favourites_name;
 	auto favourites_temp_name = favourites_name.GetFV();
-	if (favourites_temp_name[NULL] == "") MessageBox::Show("Вы не выбрали книги", "Упс...");
+	if (favourites_temp_name[NULL] == "") MessageBox::Show("Вы не выбрали книги", "Ошибка");
 	else
 	{
 		srand(time(NULL));
@@ -281,7 +281,7 @@ void CurseProject::LibraryForm::HeaderE()
 
 System::Void CurseProject::LibraryForm::button3_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	if (temp->value == 0) MessageBox::Show("Вы не получали книги", "Упсс...");
+	if (temp->value == 0) MessageBox::Show("Вы не получали книги", "Ошибка");
 	else MessageBox::Show("До даты последнего дня аренды книг: " + this->temp->value.ToString() + " дней", "Статус");
 }
 

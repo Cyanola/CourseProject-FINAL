@@ -3,7 +3,7 @@
 #include "LibraryForm.h"
 using namespace System;
 
-void SetData()	
+void TransferData()	
 {
 	ifstream File_Default(MAIN_BOOKS);
 	vector<string> temp_data; string temp;
@@ -23,17 +23,17 @@ void SetData()
 	File_Data.close();
 }
 
-void ReGroupData()
+void ReturnData()
 {
-	std::vector<std::string> regroup;
+	std::vector<std::string> ret;
 	Work_ work;
 	work.book();
-	regroup = work.Print();
+	ret = work.Print();
 	ofstream File_New(BOOKS_FILE, ios_base::trunc); 
 	if (!File_New.is_open()) throw exception("File read error");
-	for (int i = 0; i < regroup.size(); i++) { 
-		if (i == regroup.size() - 1) File_New << regroup[i];
-		else File_New << regroup[i] << endl;
+	for (int i = 0; i < ret.size(); i++) { 
+		if (i == ret.size() - 1) File_New << ret[i];
+		else File_New << ret[i] << endl;
 	}
 }
 
@@ -55,42 +55,42 @@ System::String^ Convert_string_To_String(std::string& os)
 
 vector<Heads> ReturnCell(vector<string> s, int count)
 {
-	Heads ones;
-	vector <Heads> ones_v;
+	Heads heads;
+	vector <Heads> heads_v;
 	regex reg(BITSTRING);
-	smatch cat; 
+	smatch sm; 
 	for (int i = 0; i < count; i++)
 	{
-		ones_v.push_back(ones);
-		int iterator = 0;
-		while (regex_search(s[i], cat, reg))
+		heads_v.push_back(heads);
+		int iter = 0;
+		while (regex_search(s[i], sm, reg))
 		{
-			switch (iterator)
+			switch (iter)
 			{
 			case 0:
-				ones_v[i].Janr = cat.str();
+				heads_v[i].Janr = sm.str();
 				break;
 			case 1:
-				ones_v[i].Nazvanie = cat.str();
+				heads_v[i].Nazvanie = sm.str();
 				break;
 			case 2:
-				ones_v[i].Year = cat.str();
+				heads_v[i].Year = sm.str();
 				break;
 			case 3:
-				ones_v[i].Author = cat.str();
+				heads_v[i].Author = sm.str();
 				break;
 			case 4:
-				ones_v[i].Pages = cat.str();
+				heads_v[i].Pages = sm.str();
 				break;
 			case 5:
-				ones_v[i].Ekzemps = cat.str();
+				heads_v[i].Ekzemps = sm.str();
 				break;
 			default:
 				break;
 			}
-			s[i] = cat.suffix();
-			iterator++;
+			s[i] = sm.suffix();
+			iter++;
 		}
 	}
-	return ones_v;
+	return heads_v;
 }

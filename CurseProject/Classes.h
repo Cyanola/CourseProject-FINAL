@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <ctime>
 using namespace std;
-#define FILE_FAVOURITES_NAME "Favourites.txt"		//
+#define FILE_FAVOURITES_NAME "Favourites.txt"
 #define BOOKS_FILE "Data.txt"				// Имена Файлов
 #define MAIN_BOOKS "DefaultData.txt"
 
@@ -18,7 +18,7 @@ using namespace std;
 #define SEARCH_ROMAN R"((Roman)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Романы
 #define SEARCH_RASSKAZ R"((Rasskaz)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Рассказы
 #define SEARCH_STIH R"((Stihotvorenie)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Стихотворения
-#define SEARCH_PIESA R"((Piesa)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Мифы
+#define SEARCH_PIESA R"((Piesa)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Пьесы
 #define SEARCH_SKAZKA R"((Skazka)\s\w{2,30}\s\d{4}\s\w{3,15}\s\d{2,4}\s\d{1})" // Регулярное выражение для группы Сказки
 #define BITSTRING R"((\w{2,30}\s)|(\w{3,15})|(\d{2,4})|(\d{1}))" //Регулярное выражения для разбиения строки на подстроки
 

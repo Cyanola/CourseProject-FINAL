@@ -22,7 +22,7 @@ System::Void CurseProject::LoginForm::AdminButton_Click(System::Object^ sender, 
 
 System::Void CurseProject::LoginForm::ChitatelButton_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	ReGroupData();
+	ReturnData();
 	Form::Hide();
 	LibraryForm^ form2 = gcnew LibraryForm();
 	form2->Show();

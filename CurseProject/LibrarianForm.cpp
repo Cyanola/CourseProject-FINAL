@@ -55,7 +55,7 @@ System::Void CurseProject::LibrarianForm::button1_Click(System::Object^ sender, 
 System::Void CurseProject::LibrarianForm::Dat_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	MessageBox::Show("Успешно", "Состояние");
-	SetData();
+	TransferData();
 }
 
 System::Void CurseProject::LibrarianForm::Povest_Click(System::Object^ sender, System::EventArgs^ e)
