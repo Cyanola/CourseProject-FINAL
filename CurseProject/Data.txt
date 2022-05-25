@@ -7,7 +7,7 @@ Povest Detstvo 1844 Tolstoy 225 9
 Povest Kapitanskaya_Dochka 1826 Pushkin 332 9
 Povest Baryshnya_Krestyanka 1825 Pushkin 471 9
 Povest Asya 1854 Turgenev 100 9
-Povest Granatovy_Braslet 1889 Kuprin 225 9
+Povest Granatovy_Braslet 1889 Kuprin 225 1
 Povest Olesya 1869 Kuprin 244 9
 Povest Yar 1920 Esenin 154 9
 Povest Yama 1873 Kuprin 169 9
@@ -21,7 +21,7 @@ Roman Dubrovsky 1836 Pushkin 389 9
 Roman Oblomov 1856 Goncharov 889 9
 Roman Peterburg 1869 Bely 456 9
 Roman Podrostok 1871 Dostoevsky 555 9
-Roman Maski 1860 Bely 444 9
+Roman Maski 1860 Bely 444 4
 Roman Proza 1899 Venevitinov 741 9
 Roman Zolotaya_Tsep 1873 Grin 233 9
 Roman OtsyiDeti 1859 Turgenev 547 9
@@ -80,3 +80,4 @@ Piesa Bespridannitsa 1878 Ostrovsky 106 9
 Piesa Na_dne 1902 Gorky 247 9
 Piesa Stranny_Chelovek 1880 Lermontov 345 9
 Roman Master_and_Margarita 1999 Bulgakov 500 9
+Skazka Alenkiy_Tsvetochek 1999 Aksakov 145 6

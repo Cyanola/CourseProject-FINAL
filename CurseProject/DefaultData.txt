@@ -80,3 +80,4 @@ Piesa Bespridannitsa 1878 Ostrovsky 106 9
 Piesa Na_dne 1902 Gorky 247 9
 Piesa Stranny_Chelovek 1880 Lermontov 345 9
 Roman Master_and_Margarita 1999 Bulgakov 500 9
+Skazka Alenkiy_Tsvetochek 1999 Aksakov 145 9
