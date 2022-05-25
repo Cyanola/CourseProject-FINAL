@@ -222,7 +222,7 @@ namespace CurseProject {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(139, 64);
 			this->button3->TabIndex = 12;
-			this->button3->Text = L"Узнать дату окночания аренды книг";
+			this->button3->Text = L"Узнать дату окончания аренды книг";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &LibraryForm::button3_Click);
 			// 

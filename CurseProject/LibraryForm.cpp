@@ -165,7 +165,7 @@ System::Void CurseProject::LibraryForm::Fav_Click(System::Object^ sender, System
 		}
 		catch (Exception^ e)
 		{
-			MessageBox::Show("Неизвестная ошибка", "Ошибка...");
+			MessageBox::Show("Выбран неверный индекс", "Ошибка...");
 		}
 	}
 }
